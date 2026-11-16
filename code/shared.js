@@ -84,6 +84,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
     counterObserver.disconnect();
     for (const number of stats.querySelectorAll("dd")) {
       const finalText = number.textContent.trim();
+      if (!/^\d+/.test(finalText)) continue;
       const target = parseInt(finalText, 10);
       const suffix = finalText.replace(/^\d+/, "");
       const digits = finalText.match(/^\d+/)[0].length;

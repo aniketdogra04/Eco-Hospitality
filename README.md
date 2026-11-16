@@ -37,3 +37,9 @@ The repeated hotel names, activity descriptions, nearby-place distance badges an
 Open `http://localhost:8000/code/wedding.html`. Page-specific styles and JavaScript live in `code/wedding/`; image and SVG assets live in `assets/wedding/`.
 
 Source: [Design → New design → Wedding](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1008-9221). Uses the shared site components and animation module. The gallery opens accessible native dialogs. The enquiry form validates the fields and prepares a copyable enquiry and an email draft addressed to `aniket.unmetered@gmail.com`. The guest sends the draft from their own email app; the site does not claim that an enquiry has been sent.
+
+## Dining page
+
+Open `http://localhost:8000/code/dining.html`. Page-specific CSS and JavaScript live in `code/dining/`; its hero and chef photographs live in `assets/dining/`. Shared hotel photos, gallery images and icons are reused.
+
+Source: [Design → New design → Dining](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1016-11347). Hotel details and gallery photos open accessible dialogs; FAQs use native accordions. Repeated hotel names, gallery imagery and the Shimla FAQ heading follow the supplied design. Shared counter behavior animates numeric facts while preserving text facts such as Local and Daily.

@@ -1,0 +1,53 @@
+/* Dining layouts; reusable hotel cards, gallery and feature rows: components.css. */
+.dining-hero { min-height: 680px; }
+.hero-copy { max-width: 617px; }
+.dining-hero .eyebrow { color: #d2e4ab; }
+.dining-hero h1 { margin-top: 20px; font-size: clamp(40px,5vw,56px); line-height: 1.075; letter-spacing: -1px; }
+.hero-description { max-width: 570px; margin-top: 28px; color: #eef0e8; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 28px; }
+.hero-actions .text-link { align-self: center; }
+.button-sage { color: var(--ink); background: #d2e4ab; }
+.button-sage:hover { background: var(--sage); }
+.button-sage::after { content: url('../../assets/arrow-dark.svg'); }
+.dining-intro { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); }
+.intro-copy { color: var(--body-color); }
+.lead { color: var(--ink); font: italic 500 28px/1.25 var(--serif); letter-spacing: -.3px; }
+.intro-copy > p + p { padding-block: 28px; }
+.stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid var(--line); padding-top: 28px; }
+.stats div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 10px; }
+.stats div + div { padding-left: 24px; }
+.stats dd { color: var(--ink); font: italic 500 32px/1 var(--serif); }
+.stats dt { font-size: var(--font-size-small); font-weight: 500; }
+.chef-section { display: grid; grid-template-columns: minmax(0,1fr) calc(50% - 115px); background: var(--deep-olive); color: var(--white); }
+.chef-copy { padding: var(--section-space) 80px var(--section-space) max(var(--gutter),calc((100vw - var(--max-width))/2)); }
+.chef-copy .eyebrow { color: #b7d37a; }
+.chef-copy h2 { margin-top: 18px; }
+.chef-copy > p { margin-top: 24px; color: #e7f1d3; }
+.chef-copy ol { padding: 0; margin: 36px 0 0; list-style: none; }
+.chef-copy li { display: grid; grid-template-columns: 47px minmax(0,1fr); align-items: center; padding-block: 22px; border-top: 1px solid rgb(255 255 255 / .2); }
+.chef-copy .row-number { color: #d2e4ab; font-size: 12px; }
+.chef-copy li p { margin-top: 8px; color: var(--sage); }
+.chef-photo { position: relative; min-height: 560px; }
+.gallery-section { padding-bottom: 0; }
+.faq .eyebrow + h2 { margin-top: 18px; }
+#dining-dialog:has([data-full-photo]) { width: min(960px,calc(100% - 32px)); }
+#dialog-image[data-full-photo] { max-height: 70vh; object-fit: contain; }
+@media(max-width:1040px) {
+ .stats div + div { padding-left: 12px; }
+ .stats dt { font-size: 12px; }
+ .chef-copy { padding-right: var(--gutter); }
+}
+@media(max-width:860px) {
+ .dining-intro { gap: 32px; }
+ .chef-section { grid-template-columns: minmax(0,1fr) 42%; }
+}
+@media(max-width:620px) {
+ .dining-hero { min-height: 550px; padding-block: 56px; }
+ .dining-hero h1 { font-size: clamp(36px,9vw,50px); }
+ .dining-hero .cover { object-position: 60% center; }
+ .dining-intro, .chef-section { grid-template-columns: minmax(0,1fr); }
+ .lead { font-size: 25px; }
+ .stats dd { font-size: 28px; }
+ .chef-copy { padding: 46px var(--gutter) var(--section-space); }
+ .chef-photo { min-height: 400px; }
+}

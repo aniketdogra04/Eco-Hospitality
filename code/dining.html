@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover dining across Eco Hospitality’s Himalayan retreats: local ingredients, Himachali recipes and generous tables.">
+    <title>Dining | Eco Hospitality</title>
+    <link rel="preload" href="../assets/fonts/playfair-display-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="dining/dining.css">
+    <script src="dining/dining.js" type="module">
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="brand">
+          <img src="../assets/logo-header.svg" alt="Eco Hospitality home" width="145" height="51">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="index.html#destinations">Destinations</a>
+          <a href="index.html#hotels">Hotels</a>
+          <a href="dining.html" aria-current="page">Dining</a>
+          <a href="wedding.html">Wedding</a>
+          <a href="index.html#experiences">Experiences</a>
+          <a href="index.html#stories">Blogs</a>
+          <a href="index.html#about">About</a>
+        </nav>
+        <a class="button button-arrow header-booking" href="index.html#booking">Plan your stay</a>
+      </div>
+    </header>
+    <main id="main">
+      <section class="dining-hero image-banner" aria-labelledby="hero-title">
+        <img class="cover" src="../assets/dining/hero.png" alt="" fetchpriority="high">
+        <div class="container">
+          <div class="hero-copy">
+            <p class="eyebrow">Dining across the Himachal</p>
+            <h1 id="hero-title">Taste the Himachal</h1>
+            <p class="hero-description">Local ingredients, generous tables and the kind of hospitality that turns every meal into a story worth sharing.</p>
+            <div class="hero-actions">
+              <a class="button button-arrow button-sage" href="#hotels">Discover our tables</a>
+              <a class="text-link text-link-light" href="#philosophy">Our dining philosophy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section " id="about-dining">
+        <div class="container">
+          <div class="dining-intro">
+            <div>
+              <p class="eyebrow">Dining at Eco Hospitality</p>
+              <h2>Food that feels<br>close to home.</h2>
+            </div>
+            <div class="intro-copy" data-reveal>
+              <p class="lead">In the mountains, the best meals begin with what is fresh, local and shared generously.</p>
+              <p>Our kitchens bring together authentic Himachali flavours, familiar favourites and thoughtful global dishes. Whether it is a quiet breakfast looking over the valley or a long family dinner, every table is set with care.</p>
+              <dl class="stats">
+                <div>
+                  <dt>Distinct dining destinations</dt>
+                  <dd>08</dd>
+                </div>
+                <div>
+                  <dt>Produce whenever possible</dt>
+                  <dd>Local</dd>
+                </div>
+                <div>
+                  <dt>Menus made with care</dt>
+                  <dd>Daily</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section muted-section" id="hotels">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Our hotels</p>
+              <h2>Stay in our finest retreats</h2>
+            </div>
+            <p class="section-description">From heritage hideaways to contemporary mountain retreats, each hotel is different—yet every welcome feels unmistakably Eco.</p>
+          </div>
+          <div class="card-grid">
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-night.webp" alt="" loading="lazy">
+                <span class="badge">01</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="1">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-flowers.webp" alt="" loading="lazy">
+                <span class="badge">02</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="2">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-mountain.webp" alt="" loading="lazy">
+                <span class="badge">03</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="3">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-hillside.webp" alt="" loading="lazy">
+                <span class="badge">04</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="4">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-balconies.webp" alt="" loading="lazy">
+                <span class="badge">05</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="5">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-evening.webp" alt="" loading="lazy">
+                <span class="badge">06</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="6">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-entrance.webp" alt="" loading="lazy">
+                <span class="badge">07</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="7">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-suite.webp" alt="" loading="lazy">
+                <span class="badge">08</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="8">View hotel</button>
+            </article>
+            <article class="listing-card">
+              <div class="listing-photo">
+                <img class="cover" src="../assets/resort-hillside.webp" alt="" loading="lazy">
+                <span class="badge">09</span>
+              </div>
+              <p class="listing-meta">Shimla, Himachal Pradesh</p>
+              <h3>Shimla, Heaven Resorts</h3>
+              <button class="text-link" type="button" data-hotel="9">View hotel</button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section " id="philosophy">
+        <div class="container">
+          <div class="center-heading">
+            <div>
+              <p class="eyebrow">The Eco dining promise</p>
+              <h2>Thoughtful from kitchen to<br>table</h2>
+            </div>
+            <p>Genuine ingredients, skilled hands and heartfelt hospitality.</p>
+          </div>
+          <ol class="service-list">
+            <li data-reveal>
+              <span class="row-number">01</span>
+              <img src="../assets/wedding/service-1.svg" alt="" width="54" height="54">
+              <h3>Farm fresh &amp; local</h3>
+              <p>Ingredients with a sense of place</p>
+            </li>
+            <li data-reveal>
+              <span class="row-number">02</span>
+              <img src="../assets/wedding/service-2.svg" alt="" width="54" height="54">
+              <h3>Diverse cuisines</h3>
+              <p>From Himachali recipes to familiar favourites</p>
+            </li>
+            <li data-reveal>
+              <span class="row-number">03</span>
+              <img src="../assets/wedding/service-3.svg" alt="" width="54" height="54">
+              <h3>Chef crafted</h3>
+              <p>Thoughtful menus, made every day</p>
+            </li>
+            <li data-reveal>
+              <span class="row-number">04</span>
+              <img src="../assets/wedding/service-4.svg" alt="" width="54" height="54">
+              <h3>Hygienic &amp; safe</h3>
+              <p>Care behind every plate</p>
+            </li>
+            <li data-reveal>
+              <span class="row-number">05</span>
+              <img src="../assets/wedding/service-5.svg" alt="" width="54" height="54">
+              <h3>Warm hospitality</h3>
+              <p>Service that feels genuinely personal</p>
+            </li>
+            <li data-reveal>
+              <span class="row-number">06</span>
+              <img src="../assets/wedding/service-6.svg" alt="" width="54" height="54">
+              <h3>Every occasion</h3>
+              <p>Slow breakfasts, dinners and celebrations</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="chef-section" id="why-dine">
+        <div class="chef-copy" data-reveal>
+          <div>
+            <p class="eyebrow">Why dine with Eco</p>
+            <h2>A meal shaped by the<br>mountains.</h2>
+          </div>
+          <p>We believe dining is more than food. It is the scent of a familiar spice, the first bite after a day outdoors, and the conversations that linger after the plates are cleared.</p>
+          <ol>
+            <li>
+              <span class="row-number">01</span>
+              <div>
+                <h3>Season-led menus</h3>
+                <p>What grows nearby guides what arrives on your plate.</p>
+              </div>
+            </li>
+            <li>
+              <span class="row-number">02</span>
+              <div>
+                <h3>Recipes with roots</h3>
+                <p>Regional flavours are honoured, shared and kept alive.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="chef-photo" data-reveal>
+          <img class="cover" src="../assets/dining/chef.png" alt="A chef preparing a buffet of freshly cooked dishes" loading="lazy">
+        </div>
+      </section>
+      <section class="section gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Dining across our properties</p>
+              <h2>Gather, taste, stay a<br>little longer</h2>
+            </div>
+            <p class="section-description">Discover local flavours and memorable meals across our properties, each with its own character and the same warm Eco welcome.</p>
+          </div>
+          <div class="photo-gallery">
+            <button class="gallery-photo photo-1" type="button" data-gallery="1" aria-label="View photo 1: Restaurant interiors at a mountain wedding venue" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery1.png" alt="Restaurant interiors at a mountain wedding venue" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-2" type="button" data-gallery="2" aria-label="View photo 2: Mountain terrace with seating" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery2.png" alt="Mountain terrace with seating" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-3" type="button" data-gallery="3" aria-label="View photo 3: Golden Fern Resort building" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery3.png" alt="Golden Fern Resort building" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-4" type="button" data-gallery="4" aria-label="View photo 4: Guest bedroom at the mountain venue" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery4.png" alt="Guest bedroom at the mountain venue" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-5" type="button" data-gallery="5" aria-label="View photo 5: Warmly lit hotel corridor" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery5.png" alt="Warmly lit hotel corridor" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-6" type="button" data-gallery="6" aria-label="View photo 6: An outdoor celebration at the property" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery6.png" alt="An outdoor celebration at the property" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-7" type="button" data-gallery="7" aria-label="View photo 7: An outdoor wedding reception beneath a floral canopy" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery7.png" alt="An outdoor wedding reception beneath a floral canopy" loading="lazy">
+            </button>
+            <button class="gallery-photo photo-8" type="button" data-gallery="8" aria-label="View photo 8: Guests celebrating a wedding" data-reveal>
+              <img class="cover" src="../assets/wedding/gallery8.png" alt="Guests celebrating a wedding" loading="lazy">
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="faq section" id="faq" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div>
+            <p class="eyebrow">Good to know</p>
+            <h2 id="faq-title">FAQs about Shimla</h2>
+            <p class="faq-description">A few useful details before you take to the hills.</p>
+          </div>
+          <div class="accordion">
+            <details name="dining-faq" open>
+              <summary>What makes Eco Hospitality different?</summary>
+              <p>We bring together characterful stays, local knowledge and responsible hospitality across the Himalayas—so every journey feels personal to the place.</p>
+            </details>
+            <details name="dining-faq">
+              <summary>Can I book experiences along with my stay?</summary>
+              <p>Explore <a href="index.html#experiences">local experiences</a> when planning your stay. Ask your chosen hotel which activities are available on your dates.</p>
+            </details>
+            <details name="dining-faq">
+              <summary>Do you host weddings and private events?</summary>
+              <p>Yes. Eco Hospitality hosts intimate ceremonies, milestone gatherings and mountain weddings. Explore our <a href="wedding.html">wedding section</a> to learn more.</p>
+            </details>
+            <details name="dining-faq">
+              <summary>How does Eco Hospitality support local communities?</summary>
+              <p>Our locally rooted teams bring local knowledge, ingredients and traditions into the guest experience.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html">
+              <img src="../assets/logo-footer.svg" alt="Eco Hospitality home" width="158" height="55">
+            </a>
+            <p>Thoughtful stays. Remarkable places. Heartfelt Himalayan hospitality.</p>
+            <h2>Follow us:</h2>
+            <div class="socials">
+              <button aria-label="Facebook" type="button" data-page="Facebook">
+                <img src="../assets/facebook.svg" alt="" width="14" height="14">
+              </button>
+              <button aria-label="Instagram" type="button" data-page="Instagram">
+                <img src="../assets/instagram.svg" alt="" width="14" height="14">
+              </button>
+              <button aria-label="YouTube" type="button" data-page="YouTube">
+                <img src="../assets/youtube.svg" alt="" width="14" height="14">
+              </button>
+            </div>
+          </div>
+          <div>
+            <h2>Destination</h2>
+            <ul>
+              <li>
+                <a href="destinations/shimla.html">Hotels in Shimla</a>
+              </li>
+              <li>
+                <a href="index.html#booking" data-destination="Dalhousie">Hotels in Dalhousie</a>
+              </li>
+              <li>
+                <a href="index.html#booking" data-destination="Spiti">Hotels in Spiti</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Hotel</h2>
+            <ul>
+              <li>
+                <button type="button" data-page="Golden Fern Resort">Golden Fern Resort</button>
+              </li>
+              <li>
+                <button type="button" data-page="Shimla Havens Resort">Shimla Havens Resort</button>
+              </li>
+              <li>
+                <button type="button" data-page="Hotel Woodrina">Hotel Woodrina</button>
+              </li>
+              <li>
+                <button type="button" data-page="SS Resort">SS Resort</button>
+              </li>
+              <li>
+                <button type="button" data-page="Hotel Snow Castle">Hotel Snow Castle</button>
+              </li>
+              <li>
+                <button type="button" data-page="Mahamaya Regency">Mahamaya Regency</button>
+              </li>
+              <li>
+                <button type="button" data-page="Maitreya Regency">Maitreya Regency</button>
+              </li>
+              <li>
+                <button type="button" data-page="Maitreya Mud House">Maitreya Mud House</button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Company</h2>
+            <ul>
+              <li>
+                <a href="index.html#about">About us</a>
+              </li>
+              <li>
+                <a href="wedding.html">Wedding</a>
+              </li>
+              <li>
+                <button type="button" data-page="Offers">Offers</button>
+              </li>
+              <li>
+                <button type="button" data-page="Contact us">Contact us</button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Information</h2>
+            <ul>
+              <li>
+                <button type="button" data-page="Privacy policy">Privacy policy</button>
+              </li>
+              <li>
+                <button type="button" data-page="Terms &amp; Conditions">Terms &amp; Conditions</button>
+              </li>
+              <li>
+                <button type="button" data-page="Cancellation &amp; Refund">Cancellation &amp; Refund</button>
+              </li>
+              <li>
+                <button type="button" data-page="RSS">RSS</button>
+              </li>
+              <li>
+                <button type="button" data-page="Sitemap">Sitemap</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-base">
+          <p>© All Rights Reserved Eco Hospitality 2026.</p>
+          <p>Powered By: <strong>Unmetered</strong>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <dialog id="dining-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-content">
+        <div class="dialog-heading">
+          <h2 id="dialog-title">
+          </h2>
+          <button class="dialog-close" type="button" data-close aria-label="Close details">×</button>
+        </div>
+        <img id="dialog-image" class="detail-image" alt="" hidden>
+        <p id="dialog-description">
+        </p>
+        <a class="button button-arrow" id="dialog-action" href="index.html?destination=Shimla#booking">Plan your stay</a>
+      </div>
+    </dialog>
+  </body>
+</html>
