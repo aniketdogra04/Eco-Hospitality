@@ -36,4 +36,4 @@ The repeated hotel names, activity descriptions, nearby-place distance badges an
 
 Open `http://localhost:8000/code/wedding.html`. Page-specific styles and JavaScript live in `code/wedding/`; image and SVG assets live in `assets/wedding/`.
 
-Source: [Design → New design → Wedding](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1008-9221). Uses the shared site components and animation module. The gallery opens accessible native dialogs. The enquiry form validates the fields and prepares a copyable enquiry with a call action; online delivery awaits a configured recipient or form endpoint and does not claim that an enquiry was sent.
+Source: [Design → New design → Wedding](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1008-9221). Uses the shared site components and animation module. The gallery opens accessible native dialogs. The enquiry form validates the fields and prepares a copyable enquiry and an email draft addressed to `aniket.unmetered@gmail.com`. The guest sends the draft from their own email app; the site does not claim that an enquiry has been sent.

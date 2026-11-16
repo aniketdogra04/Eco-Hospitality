@@ -49,12 +49,12 @@ form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
   const data = new FormData(form);
-  openDetails('Your wedding enquiry', 'Your details are ready to share. Online delivery is not connected yet. Copy your enquiry and call our wedding team to discuss your celebration.');
+  openDetails('Your wedding enquiry', 'Your enquiry is ready. Open the email draft below and send it from your email app to aniket.unmetered@gmail.com. You can also copy the details or call +91 9816 608800.');
   summary.textContent = ['Name: '+data.get('name'), 'Phone: '+data.get('phone'), 'Email: '+data.get('email'), 'Celebration date: '+data.get('date'), 'Guests: '+data.get('guests'), 'Details: '+data.get('message')].join('\n');
   summary.hidden = false;
   copy.hidden = false;
-  action.href = 'tel:+919816608800';
-  action.textContent = 'Call wedding team';
+  action.href = 'mailto:aniket.unmetered@gmail.com?subject=' + encodeURIComponent('Wedding enquiry — ' + data.get('name')) + '&body=' + encodeURIComponent(summary.textContent);
+  action.textContent = 'Open email draft';
 });
 copy.addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(summary.textContent); status.textContent = 'Enquiry copied.'; }
