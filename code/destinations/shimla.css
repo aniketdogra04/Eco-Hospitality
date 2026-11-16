@@ -1,0 +1,95 @@
+/* Destination layouts; reuse global.css tokens and components.css primitives. */
+.shimla-hero { min-height: 680px; }
+.hero-copy { max-width: 617px; }
+.shimla-hero .eyebrow { color: #d2e4ab; }
+.shimla-hero h1 { margin-top: 20px; font-size: clamp(40px, 5vw, 56px); line-height: 1.075; letter-spacing: -1px; }
+.hero-description { max-width: 570px; margin-top: 28px; color: #eef0e8; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 28px; }
+.hero-actions .text-link { align-self: center; }
+.button-sage { background: #d2e4ab; color: var(--ink); }
+.button-sage:hover { background: var(--sage); }
+.button-sage::after { content: url('../../assets/arrow-dark.svg'); }
+.about-layout { display: grid; grid-template-columns: 420fr 538fr; gap: clamp(32px, 9.8vw, 142px); }
+.about-copy { color: var(--body-color); }
+.about-copy .lead { color: var(--ink); font: italic 500 28px/1.25 var(--serif); letter-spacing: -.3px; }
+.about-copy > p + p { margin-top: 28px; }
+.about-copy > p:last-of-type { margin-top: 16px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); margin-top: 28px; border-top: 1px solid var(--line); padding-top: 28px; }
+.stats div { display: flex; flex-direction: column-reverse; gap: 10px; }
+.stats div + div { padding-left: 24px; }
+.stats dd { color: var(--ink); font: italic 500 32px/1 var(--serif); }
+.stats dt { font-size: var(--font-size-small); font-weight: 500; }
+.section-description .text-link { margin-top: 16px; }
+.center-heading { max-width: 538px; margin: auto; text-align: center; }
+.center-heading h2 { margin-top: 16px; }
+.center-heading > p { margin-top: 24px; color: var(--body-color); }
+.activity-list { padding: 0; margin: 56px 0 0; list-style: none; }
+.activity-list li { border-top: 1px solid var(--sage); }
+.activity { display: grid; grid-template-columns: 94px 140px minmax(0,1fr) 70px; align-items: center; width: 100%; padding: 28px 0; border: 0; background: transparent; text-align: left; }
+.activity-list li:last-child .activity { padding-bottom: 0; }
+.activity-number { color: var(--olive); font-weight: 600; }
+.activity-photo { position: relative; height: 100px; overflow: hidden; border-radius: 2px; }
+.activity-copy { display: grid; gap: 12px; padding: 0 80px 0 28px; color: var(--body-color); font-size: var(--font-size-small); font-weight: 500; }
+.activity-title { color: var(--heading-ink); font: italic 500 28px/1.25 var(--serif); letter-spacing: -.3px; }
+.activity-arrow { justify-self: end; display: block; width: 20px; height: 20px; font-size: 0; background: url('../../assets/arrow-dark.svg') center/20px no-repeat; transition: transform 350ms ease; }
+.activity:hover .activity-arrow { transform: rotate(45deg); }
+.nearby-grid, .other-grid { display: grid; gap: 24px; margin-top: 40px; }
+.nearby-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+/* Shared destination cards retain the homepage hover zoom and gradient. */
+.destination { padding: 14px; }
+.destination > div { width: 100%; }
+.destination h3 { padding-bottom: 10px; border-bottom: 1px solid rgb(255 255 255 / .6); }
+.destination p { margin-top: 8px; font-size: var(--font-size-small); }
+.nearby-card { min-height: 360px; flex-direction: column; align-items: flex-start; justify-content: space-between; }
+.season-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 40px; border: 1px solid #d1d7b8; border-radius: 2px; }
+.season-grid article { padding: 40px; min-height: 272px; }
+.season-grid article + article { border-left: 1px solid #d1d7b8; }
+.season-grid .badge { background: rgb(210 228 171 / .86); border-color: #b7d37a; }
+.season-grid h3 { margin-top: 48px; font-size: 32px; letter-spacing: -.4px; }
+.season-grid p { margin-top: 16px; color: var(--body-color); }
+.temperature { text-align: right; color: var(--body-color); font-size: var(--font-size-small); }
+.temperature strong { display: block; color: var(--ink); font: italic 500 32px/1.25 var(--serif); }
+.temperature span { display: block; }
+.faq { padding-top: 0; }
+.other-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.other-card { min-height: 360px; }
+.other-card h3 { display: flex; justify-content: space-between; }
+.other-card h3 span { width: 24px; height: 24px; font-size: 0; background: url('../../assets/arrow-light.svg') center/24px no-repeat; }
+.closing { min-height: 580px; }
+.closing::before { background: rgb(0 0 0 / .2); }
+@media (max-width: 860px) {
+  .about-layout { grid-template-columns: 1fr 1.3fr; gap: 32px; }
+  .stats div + div { padding-left: 12px; }
+  .stats dt { font-size: 12px; }
+  .nearby-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .activity { grid-template-columns: 45px 120px minmax(0,1fr) 24px; }
+  .activity-copy { padding-inline: 24px; }
+  .season-grid article { padding: 24px; }
+  .season-grid h3 { font-size: 27px; }
+}
+@media (max-width: 620px) {
+  .shimla-hero { min-height: 550px; padding-block: 56px; }
+  .shimla-hero .cover { object-position: 58% center; }
+  .hero-copy { max-width: 420px; }
+  .shimla-hero h1 { font-size: clamp(36px,9vw,50px); }
+  .about-layout { grid-template-columns: minmax(0,1fr); }
+  .about-copy .lead { font-size: 25px; }
+  .stats dt { font-size: 12px; }
+  .stats dd { font-size: 28px; }
+  .activity-list { margin-top: 32px; }
+  .activity { grid-template-columns: 28px minmax(0,1fr) 20px; gap: 12px; }
+  .activity-photo { grid-column: 2; height: 150px; }
+  .activity-number { grid-row: 1; }
+  .activity-copy { grid-column: 2; padding: 0; }
+  .activity-title { font-size: 25px; }
+  .activity-arrow { grid-column: 3; grid-row: 1 / span 2; }
+  .nearby-grid, .other-grid, .season-grid { grid-template-columns: minmax(0,1fr); gap: 16px; margin-top: 26px; }
+  .season-grid { gap: 0; }
+  .season-grid article + article { border-left: 0; border-top: 1px solid #d1d7b8; }
+  .season-grid article { min-height: 0; padding: 28px; }
+  .season-grid h3 { margin-top: 28px; }
+  .temperature { text-align: left; }
+  .nearby-card { min-height: 360px; }
+  .other-card { min-height: 300px; }
+  .closing { min-height: 390px; }
+}
