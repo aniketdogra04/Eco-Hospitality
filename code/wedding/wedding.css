@@ -42,17 +42,6 @@
 .enquiry-copy { padding-top: 24px; }
 .enquiry-copy h2 { font-size: clamp(36px,4.4vw,48px); letter-spacing: -.8px; }
 .enquiry-copy > p { max-width: 421px; margin-block: 24px; color: var(--body-color); font-size: 15px; }
-.enquiry-form, .enquiry-form label { display: grid; gap: 6px; min-width: 0; }
-.enquiry-form { gap: 24px; }
-.enquiry-form label { font-size: var(--font-size-small); font-weight: 500; }
-.form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
-.enquiry-form :is(input,select,textarea) { width: 100%; min-width: 0; padding: 6px 0 12px; border: 0; border-bottom: 1px solid #e2e2dc; border-radius: 0; background: transparent; color: var(--ink); font: 400 14px/1.6 var(--sans); }
-.enquiry-form input::placeholder, .enquiry-form textarea::placeholder { color: #a9aaa1; opacity: 1; }
-.enquiry-form textarea { min-height: 100px; resize: vertical; }
-.enquiry-form > .button { justify-self: start; }
-.dialog-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
-.dialog-actions .text-link { align-self: center; }
-#enquiry-summary { white-space: pre-wrap; overflow-wrap: anywhere; font: 400 14px/1.6 var(--sans); margin: 0; }
 #wedding-dialog:has([data-full-photo]) { width: min(960px,calc(100% - 32px)); }
 #dialog-image[data-full-photo] { max-height: 70vh; object-fit: contain; }
 @media(max-width: 1040px) {
@@ -60,11 +49,13 @@
 .stats div + div { padding-left: 12px; }
 .stats dt { font-size: 12px; }
 
+
 }
 @media(max-width: 860px) {
 .intro-layout, .setting-layout, .enquiry-layout { gap: 32px; }
 .wedding-process { grid-template-columns: 42% minmax(0,1fr); }
 .process-copy { padding-block: 52px; }
+
 
 }
 @media(max-width: 620px) {
@@ -78,6 +69,6 @@
 .wedding-process { grid-template-columns: minmax(0,1fr); }
 .process-photo { min-height: 400px; }
 .process-copy { padding: 46px var(--gutter) var(--section-space); }
-.form-row { gap: 16px; }
+
 
 }

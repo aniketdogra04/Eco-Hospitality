@@ -169,3 +169,19 @@
 .gallery-photo { grid-area: auto; min-height: 230px; height: auto; margin-top: 0; }
 .photo-2, .photo-7 { grid-column: span 2; }
 }
+
+/* Shared enquiry form fields and dialog actions. */
+.enquiry-form, .enquiry-form label { display: grid; gap: 6px; min-width: 0; }
+.enquiry-form { gap: 24px; }
+.enquiry-form label { font-size: var(--font-size-small); font-weight: 500; }
+.form-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; }
+.enquiry-form :is(input,select,textarea) { width: 100%; min-width: 0; padding: 6px 0 12px; border: 0; border-bottom: 1px solid #e2e2dc; border-radius: 0; background: transparent; color: var(--ink); font: 400 14px/1.6 var(--sans); }
+.enquiry-form input::placeholder, .enquiry-form textarea::placeholder { color: #a9aaa1; opacity: 1; }
+.enquiry-form textarea { min-height: 100px; resize: vertical; }
+.enquiry-form > .button { justify-self: start; }
+.dialog-actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.dialog-actions .text-link { align-self: center; }
+#enquiry-summary { white-space: pre-wrap; overflow-wrap: anywhere; font: 400 14px/1.6 var(--sans); margin: 0; }
+@media(max-width: 620px) {
+.form-row { gap: 16px; }
+}
