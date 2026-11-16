@@ -31,3 +31,9 @@ New destination pages should reuse the global styles, shared components and shar
 Source: [Design → New design → Shimla](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=944-6194).
 
 The repeated hotel names, activity descriptions, nearby-place distance badges and church photography follow the supplied design. Hotel pages and live availability remain future work; hotel buttons open a detail dialog, and planning links hand the chosen destination to the existing homepage booking form. Other-destination links similarly lead to that form until those pages exist.
+
+## Wedding page
+
+Open `http://localhost:8000/code/wedding.html`. Page-specific styles and JavaScript live in `code/wedding/`; image and SVG assets live in `assets/wedding/`.
+
+Source: [Design → New design → Wedding](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1008-9221). Uses the shared site components and animation module. The gallery opens accessible native dialogs. The enquiry form validates the fields and prepares a copyable enquiry with a call action; online delivery awaits a configured recipient or form endpoint and does not claim that an enquiry was sent.
