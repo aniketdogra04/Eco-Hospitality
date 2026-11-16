@@ -52,6 +52,6 @@ Source: [Design → New design → About](https://www.figma.com/design/B7vUdTqjI
 
 ## Contact page
 
-Open `http://localhost:8000/code/contact.html`. Page-specific CSS and JavaScript live in `code/contact/`; map and contact icons live in `assets/contact/`. The botanical hero is shared with About, and enquiry field styles are shared with Wedding.
+Open `http://localhost:8000/code/contact.html`. Page-specific CSS and JavaScript live in `code/contact/`; contact icons live in `assets/contact/`. The botanical hero is shared with About, and enquiry field styles are shared with Wedding.
 
-Source: [Design → New design → Contact](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1064-6942). Phone and email links are actionable; the supplied map opens the displayed office address in Google Maps. The contact form validates details and prepares an email draft to `sales@ecohospitality.in`, as selected by the owner. The guest sends the message through their own email app. Social buttons retain the existing site's placeholder dialog until profile URLs are supplied.
+Source: [Design → New design → Contact](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1064-6942). Phone and email links are actionable; an interactive Google Maps embed uses the displayed office address, with a separate link to open the exact address search in Google Maps. The contact form validates details and prepares an email draft to `sales@ecohospitality.in`, as selected by the owner. The guest sends the message through their own email app. Social buttons retain the existing site's placeholder dialog until profile URLs are supplied.
