@@ -43,3 +43,9 @@ Source: [Design → New design → Wedding](https://www.figma.com/design/B7vUdTq
 Open `http://localhost:8000/code/dining.html`. Page-specific CSS and JavaScript live in `code/dining/`; its hero and chef photographs live in `assets/dining/`. Shared hotel photos, gallery images and icons are reused.
 
 Source: [Design → New design → Dining](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1016-11347). Hotel details and gallery photos open accessible dialogs; FAQs use native accordions. Repeated hotel names, gallery imagery and the Shimla FAQ heading follow the supplied design. Shared counter behavior animates numeric facts while preserving text facts such as Local and Daily.
+
+## About page
+
+Open `http://localhost:8000/code/about.html`. Page-specific CSS and JavaScript live in `code/about/`; new imagery and review icons live in `assets/about/`. Existing hotel imagery and the mountain banner are shared.
+
+Source: [Design → New design → About](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1028-7866). Reuses the shared navigation, footer, typography, buttons and animations. The guest-story carousel supports previous/next and arrow keys, announces changes, and repeats the supplied review in its second slot at the owner’s request. Update the `stories` entries in `about.js` when another review is available.
