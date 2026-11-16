@@ -42,10 +42,12 @@
 .guest-section .center-heading h2 { margin-top: 18px; }
 .guest-section .center-heading > p { margin-top: 22px; font-size: 14px; }
 .review-card { position: relative; max-width: 912px; margin: 40px auto 0; padding: 40px 89px 34px; border-block: 1px solid var(--line); }
+.review-viewport { position: relative; overflow: hidden; }
+.review-outgoing { position: absolute; inset: 0; pointer-events: none; }
 .review-content blockquote { margin: 0; font: italic 500 28px/1.25 var(--serif); text-align: center; letter-spacing: -.3px; }
 .guest-details { display: flex; justify-content: center; align-items: center; gap: 16px; padding-top: 28px; min-height: 70px; }
-#guest-name { font-size: 14px; font-weight: 500; }
-#guest-location { color: var(--body-color); font-size: 10px; letter-spacing: .3px; }
+.guest-details > div > p:first-child { font-size: 14px; font-weight: 500; }
+.guest-details > div > p:last-child { color: var(--body-color); font-size: 10px; letter-spacing: .3px; }
 .guest-rating { color: #f4ba00; font-size: 12px; letter-spacing: .2px; }
 .story-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 32px; }
 .story-controls button { display: grid; place-content: center; flex: none; width: 38px; height: 38px; padding: 0; border: 1px solid #e2e2dc; border-radius: 50%; background: transparent; }
@@ -96,7 +98,9 @@
  .place-link p { grid-column: 2; }
  .place-arrow { grid-column: 3; grid-row: 1 / span 2; }
  .review-card { padding-inline: 28px; margin-top: 32px; }
- .review-content blockquote { font-size: 24px; }
+ .review-viewport { position: relative; overflow: hidden; }
+.review-outgoing { position: absolute; inset: 0; pointer-events: none; }
+.review-content blockquote { font-size: 24px; }
  .quote-left, .quote-right { top: 12px; }
  .quote-left { left: 0; }
  .quote-right { right: 0; }
