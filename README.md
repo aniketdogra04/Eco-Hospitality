@@ -55,3 +55,9 @@ Source: [Design → New design → About](https://www.figma.com/design/B7vUdTqjI
 Open `http://localhost:8000/code/contact.html`. Page-specific CSS and JavaScript live in `code/contact/`; contact icons live in `assets/contact/`. The botanical hero is shared with About, and enquiry field styles are shared with Wedding.
 
 Source: [Design → New design → Contact](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1064-6942). Phone and email links are actionable; an interactive Google Maps embed uses the displayed office address, with a separate link to open the exact address search in Google Maps. The contact form validates details and prepares an email draft to `sales@ecohospitality.in`, as selected by the owner. The guest sends the message through their own email app. Social buttons retain the existing site's placeholder dialog until profile URLs are supplied.
+
+## Blog page
+
+Open `http://localhost:8000/code/blog.html`. Page-specific CSS and JavaScript live in `code/blog/`; the exact story-photo crops live in `assets/blog/`. The botanical hero, card components and animation module are shared with the rest of the site.
+
+Source: [Design → New design → Blogs](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1065-8625). All nine cards preserve the supplied order, categories, titles and dates. Read-story buttons open accessible previews; full article bodies were not supplied. The homepage links can open a matching preview with `?story=morning`, `?story=lighter` or `?story=food`; unknown values leave the listing visible. Replace the preview content or route these buttons to full article pages when article copy is available.
