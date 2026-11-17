@@ -25,6 +25,16 @@ for (const button of document.querySelectorAll('[data-page]')) {
 for (const field of [form.elements.name, form.elements.phone, form.elements.message]) {
   field.addEventListener('input', () => field.setCustomValidity(''));
 }
+// Preserve what the visitor has typed while routing each card to the enquiry form.
+for (const link of document.querySelectorAll('[data-enquiry-topic]')) {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    form.elements.topic.value = link.dataset.enquiryTopic;
+    form.scrollIntoView({ block: 'start' });
+    form.elements.name.focus({ preventScroll: true });
+  });
+}
+
 form.addEventListener('submit', event => {
   event.preventDefault();
   for (const field of [form.elements.name, form.elements.message]) {
@@ -34,12 +44,13 @@ form.addEventListener('submit', event => {
   if (!form.reportValidity()) return;
   const data = new FormData(form);
   const name = String(data.get('name')).trim();
-  const details = ['Name: ' + name, 'Phone: ' + String(data.get('phone')).trim(), 'Email: ' + String(data.get('email')).trim(), '', 'Message:', String(data.get('message')).trim()].join('\n');
+  const topic = String(data.get('topic'));
+  const details = ['Enquiry: ' + topic, 'Name: ' + name, 'Phone: ' + String(data.get('phone')).trim(), 'Email: ' + String(data.get('email')).trim(), '', 'Message:', String(data.get('message')).trim()].join('\n');
   showDetails('Your contact enquiry', 'Your message is ready. Open the email draft below and send it from your email app to ' + recipient + '. You can also copy the details.');
   summary.textContent = details;
   summary.hidden = false;
   actions.hidden = false;
-  draft.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent('Contact enquiry — ' + name) + '&body=' + encodeURIComponent(details);
+  draft.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(topic + ' — ' + name) + '&body=' + encodeURIComponent(details);
 });
 draft.addEventListener('click', () => dialog.close());
 document.querySelector('#copy-enquiry').addEventListener('click', async () => {

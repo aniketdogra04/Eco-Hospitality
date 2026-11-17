@@ -56,6 +56,8 @@ Open `http://localhost:8000/code/contact.html`. Page-specific CSS and JavaScript
 
 Source: [Design → New design → Contact](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1064-6942). Phone and email links are actionable; an interactive Google Maps embed uses the displayed office address, with a separate link to open the exact address search in Google Maps. The contact form validates details and prepares an email draft to `sales@ecohospitality.in`, as selected by the owner. The guest sends the message through their own email app. Social buttons retain the existing site's placeholder dialog until profile URLs are supplied.
 
+The updated “Choose where the conversation begins” section reuses shared typography, badges, links and scroll reveals. Its three cards focus the enquiry form and label the email draft as a stay, celebration or partnership/press/career enquiry, preserving any message already entered. The section uses the sage background from the updated design; the map section uses the paper background while retaining the requested interactive map.
+
 ## Blog page
 
 Open `http://localhost:8000/code/blog.html`. Page-specific CSS and JavaScript live in `code/blog/`; the exact story-photo crops live in `assets/blog/`. The botanical hero, card components and animation module are shared with the rest of the site.

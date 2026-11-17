@@ -96,23 +96,54 @@
           <div class="message-panel" data-reveal>
             <h2>Send us a message</h2>
             <form id="contact-enquiry" class="enquiry-form">
+              <input type="hidden" name="topic" value="Contact enquiry">
               <label>Name<input name="name" autocomplete="name" placeholder="Your name" required maxlength="120">
               </label>
               <div class="form-row">
-                <label>Phone<input type="tel" name="phone" autocomplete="tel" placeholder="99876 54321" required pattern="[+0-9 ()-]{7,20}" maxlength="20">
+                <label>Phone<input type="tel" name="phone" autocomplete="tel" placeholder="99876 54321" required pattern="[+0-9 \(\)\-]{7,20}" maxlength="20">
                 </label>
                 <label>Email<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required maxlength="254">
                 </label>
               </div>
-              <label>Message<textarea name="message" placeholder="Your message" rows="4" required maxlength="3000">
-                </textarea>
+              <label class="message-field">Message<textarea name="message" placeholder="Your message" rows="3" required maxlength="3000"></textarea>
               </label>
               <button class="button button-arrow" type="submit">Send enquiry</button>
             </form>
           </div>
         </div>
       </section>
-      <section class="section muted-section" id="find-us">
+      <section class="section muted-section conversation-section" id="conversation" aria-labelledby="conversation-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Best time to visit</p>
+              <h2 id="conversation-title">Choose where the <br>conversation begins</h2>
+            </div>
+            <p class="section-description">A direct route to the right team, so your question reaches someone who can help from the start.</p>
+          </div>
+          <div class="conversation-grid">
+            <article data-reveal>
+              <span class="badge">01</span>
+              <h3>Plan a stay</h3>
+              <p>Room recommendations, availability and help choosing the right mountain escape.</p>
+              <a class="text-link" href="#contact-enquiry" data-enquiry-topic="Stay enquiry">Talk to reservation</a>
+            </article>
+            <article data-reveal>
+              <span class="badge">02</span>
+              <h3>Create a celebration</h3>
+              <p>Weddings, private dinners and gatherings thoughtfully shaped around your story.</p>
+              <a class="text-link" href="#contact-enquiry" data-enquiry-topic="Celebration enquiry">Speak to our event team</a>
+            </article>
+            <article data-reveal>
+              <span class="badge">03</span>
+              <h3>Work with us</h3>
+              <p>Partnerships, press, careers and ideas that share our care for the Himalayas.</p>
+              <a class="text-link" href="#contact-enquiry" data-enquiry-topic="Partnership, press or career enquiry">Start a conversation</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="find-us">
         <div class="container">
           <div class="map-heading" data-reveal>
             <p class="eyebrow">Find us in the hills</p>
