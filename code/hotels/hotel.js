@@ -1,7 +1,7 @@
 import '../shared.js';
 import { initGuestStories } from '../testimonials.js';
 
-initGuestStories();
+if (document.querySelector('.review-card')) initGuestStories();
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const booking = document.querySelector('#booking');
@@ -83,9 +83,12 @@ booking.addEventListener('submit', event => { event.preventDefault(); showEnquir
 for (const button of document.querySelectorAll('[data-room]')) {
   button.addEventListener('click', () => {
     selectedRoom = button.dataset.room;
-    showDetails(selectedRoom, 'King bed · Valley view · 255 sq. ft.\nFrom ₹5,000 per night, as shown in the resort’s room guide. Ask the hotel to confirm the current tariff and availability for your dates.', button.closest('article').querySelector('img'));
+    showDetails(selectedRoom, button.closest('article').querySelector('.room-description')?.textContent || 'King bed · Valley view · 255 sq. ft.\nFrom ₹5,000 per night, as shown in the resort’s room guide. Ask the hotel to confirm the current tariff and availability for your dates.', button.closest('article').querySelector('img'));
     roomEnquiry.hidden = false;
   });
+}
+for (const button of document.querySelectorAll('[data-book-room]')) {
+  button.addEventListener('click', () => { selectedRoom = button.dataset.bookRoom; showEnquiry(); });
 }
 roomEnquiry.addEventListener('click', () => { dialog.close(); showEnquiry(); });
 draft.addEventListener('click', () => dialog.close());

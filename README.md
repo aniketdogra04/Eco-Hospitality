@@ -70,8 +70,14 @@ Source: [Design → New design → Blogs](https://www.figma.com/design/B7vUdTqjI
 
 Open `http://localhost:8000/code/hotels/golden-fern.html`. Hotel-specific CSS and JavaScript live beside it in `code/hotels/`. Amenity icons are shared in `assets/hotels/icons/`; new property photos and the map live in `assets/hotels/golden-fern/`. Existing hotel, wedding, gallery, arrow and logo assets are reused. Golden Fern footer links throughout the site open this page.
 
-Source: [Design → New design → Hotel - Homepage](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1071-12042). Reuses global typography, spacing, animation, booking, gallery, FAQ and guest-story components. The hotel navigation targets sections on this page; Experiences opens the existing site section, and the desktop menu opens the corporate navigation. Separate hotel subpages remain future work.
+Source: [Design → New design → Hotel - Homepage](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1071-12042). Reuses global typography, spacing, animation, booking, gallery, FAQ and guest-story components. The hotel navigation targets sections on this page; Experiences opens the existing site section, and the desktop menu opens the corporate navigation. Rooms & suites has a dedicated page; the remaining hotel subpages are future work.
 
 Room and property carousels rotate the three supplied cards. Gallery photos open accessible dialogs. The two guest-story slots repeat the supplied review, following the owner's existing preference. Repeated room photographs, prices, property names, “Dinning” navigation label and the wedding section's dining copy follow the supplied frame.
 
 The date picker validates arrival and departure dates, then prepares a copyable email draft to the design's hotel address, `goldenfern@ecohospitality.in`, including the selected room when requested. The visitor sends it through their email app; live room inventory and checkout are not connected. Phone, email, wedding enquiry and Google Maps links are actionable. The map preserves the design's static image and opens the hotel location in Google Maps.
+
+## Hotel rooms and suites
+
+Open `/code/hotels/golden-fern-rooms.html`. Source: [Hotel - Rooms & suites](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1079-13996). Uses the shared hotel navigation, booking bar, date picker, enquiries and animations; page-specific layouts live in `code/hotels/rooms.css`. The hotel homepage room cards and navigation link to the listing and its room anchors.
+
+All four photos and the comparison table follow Figma. Repeated feature chips (255 sq. ft. / valley view) and the “Distinct seasons” stat preserve the supplied design, even where its descriptive copy and comparison table give different details. “Know more” opens a room preview; “Book now” prepares an email enquiry for that room and chosen dates to `goldenfern@ecohospitality.in`. Live inventory and separate single-room pages remain future work. The comparison table scrolls horizontally on small screens.
