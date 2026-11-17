@@ -80,4 +80,12 @@ The date picker validates arrival and departure dates, then prepares a copyable 
 
 Open `/code/hotels/golden-fern-rooms.html`. Source: [Hotel - Rooms & suites](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1079-13996). Uses the shared hotel navigation, booking bar, date picker, enquiries and animations; page-specific layouts live in `code/hotels/rooms.css`. The hotel homepage room cards and navigation link to the listing and its room anchors.
 
-All four photos and the comparison table follow Figma. Repeated feature chips (255 sq. ft. / valley view) and the “Distinct seasons” stat preserve the supplied design, even where its descriptive copy and comparison table give different details. “Know more” opens a room preview; “Book now” prepares an email enquiry for that room and chosen dates to `goldenfern@ecohospitality.in`. Live inventory and separate single-room pages remain future work. The comparison table scrolls horizontally on small screens.
+All four photos and the comparison table follow Figma. Repeated feature chips (255 sq. ft. / valley view) and the “Distinct seasons” stat preserve the supplied design, even where its descriptive copy and comparison table give different details. “Know more” opens a room preview; “Book now” prepares an email enquiry for that room and chosen dates to `goldenfern@ecohospitality.in`. The Classic Room has a dedicated detail page; live inventory and other single-room pages remain future work. The comparison table scrolls horizontally on small screens.
+
+## Hotel single room — Classic Room
+
+Open `/code/hotels/golden-fern-classic.html`. Source: [Hotel - Single room](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1084-17171). The supplied frame describes the Classic Room. Its homepage card and listing “Know more” link open this detail page; other room categories keep their own listing anchors.
+
+The page reuses hotel chrome, booking/date validation, gallery dialogs, card carousels and animations. Room copy styles are shared in `hotel.css`; the detail layout lives in `single-room.css`. Both “Book now” buttons and the availability form prepare an email enquiry for the Classic Room to `goldenfern@ecohospitality.in`. No booking is confirmed or email sent by the site.
+
+The exact portrait, gallery and recommendation photo crops are local assets. Repeated gallery images, the duplicated executive photo, recommendation titles and conflicting feature chips/descriptive room sizes follow Figma. “Other rooms” cards are fully clickable, with accessible names indicating their actual destination.

@@ -20,7 +20,7 @@ const draft = document.querySelector('#email-draft');
 const roomEnquiry = document.querySelector('#room-enquiry');
 const status = document.querySelector('#copy-status');
 let selectedDates = null;
-let selectedRoom = '';
+let selectedRoom = booking.dataset.roomName || '';
 let awaitingEnquiry = false;
 
 for (const button of document.querySelectorAll('[data-close]')) {

@@ -1,0 +1,20 @@
+/* Classic room page; shared hotel components provide navigation, booking and carousels. */
+.single-room-layout { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); align-items: center; }
+.single-room-photo { position: relative; height: 600px; overflow: hidden; border-radius: 2px; }
+.single-room-layout .room-actions { margin-top: 28px; }
+.room-photo-carousel { padding-bottom: 0; }
+.room-photo-carousel .card-track > article { position: relative; flex-basis: calc((100% - 24px) / 2); }
+.single-gallery-photo { display: block; width: 100%; height: 360px; border-radius: 2px; }
+.single-gallery-photo:focus-visible, #other-rooms .hotel-link-card:has(.hotel-card-link:focus-visible) { outline-offset: -4px; }
+@media(max-width:860px) {
+ .single-room-layout { gap: 32px; }
+ .single-room-photo { height: 560px; }
+ .single-gallery-photo { height: 300px; }
+}
+@media(max-width:620px) {
+ .single-room-layout { grid-template-columns: minmax(0,1fr); }
+ .single-room-photo { height: auto; aspect-ratio: 538/600; }
+ .room-photo-carousel .card-track > article { flex-basis: 100%; }
+ .single-gallery-photo { height: auto; aspect-ratio: 538/360; }
+ .hotel-hero { min-height: 500px; padding-block: 48px; }
+}

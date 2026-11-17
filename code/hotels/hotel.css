@@ -138,3 +138,12 @@
  .hotel-map > span { font-size: 10px; }
  .hotel-gallery .photo-2, .hotel-gallery .photo-7 { grid-column: auto; }
 }
+
+/* Room detail copy shared with the room listing. */
+.room-copy .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.room-copy h2 { margin-top: 18px; }
+.room-copy .room-features { margin-top: 22px; padding-bottom: 0; }
+.room-description { margin-top: 24px; color: var(--body-color); }
+.room-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 28px; }
+.room-actions .text-link { align-self: center; }
+.room-actions .button { min-height: 46px; }
