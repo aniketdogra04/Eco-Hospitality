@@ -1,0 +1,24 @@
+/* Property dining layouts compose shared hotel and gallery components. */
+.dining-row { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); align-items: center; }
+.dining-row-reversed { grid-template-columns: minmax(0,538fr) minmax(0,444fr); }
+.dining-photo { position: relative; height: 600px; overflow: hidden; border-radius: 2px; }
+.dining-copy .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.dining-copy h2 { margin-top: 18px; }
+.dining-description { margin-top: 24px; color: var(--body-color); }
+.dining-copy .button { margin-top: 28px; }
+.cuisine-section { padding-top: var(--section-space); }
+.hotel-dining-gallery { padding-block: calc(var(--section-space) + 20px); }
+.hotel-dining-gallery .section-heading h2 { max-width: 351px; margin-top: 16px; }
+.hotel-dining-gallery .gallery-photo:focus-visible { outline-offset: -4px; }
+#table-enquiry textarea { min-height: 80px; }
+@media(max-width:860px) {
+ .dining-row { gap: 32px; }
+ .dining-photo { height: 560px; }
+}
+@media(max-width:620px) {
+ .hotel-hero h1 { font-size: clamp(36px,10vw,48px); }
+ .dining-row, .dining-row-reversed { grid-template-columns: minmax(0,1fr); gap: 32px; }
+ .dining-photo { height: auto; aspect-ratio: 538/600; }
+ .dining-row-reversed .dining-copy { grid-row: 1; }
+ .hotel-dining-gallery .photo-2, .hotel-dining-gallery .photo-7 { grid-column: auto; }
+}

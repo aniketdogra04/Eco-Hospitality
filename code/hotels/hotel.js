@@ -28,7 +28,7 @@ for (const button of document.querySelectorAll('[data-close]')) {
 }
 document.querySelector('[data-site-menu]').addEventListener('click', () => document.querySelector('#site-menu').showModal());
 
-function localDate(date) {
+export function localDate(date) {
   return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-');
 }
 function nextDay(value) {
@@ -71,13 +71,21 @@ function showDetails(name, text, image, fullPhoto = false) {
   status.textContent = '';
   dialog.showModal();
 }
+export function prepareEmailEnquiry({ heading, message, details, subject }) {
+  showDetails(heading, message);
+  summary.textContent = details;
+  summary.hidden = actions.hidden = false;
+  draft.href = 'mailto:goldenfern@ecohospitality.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(details);
+}
 function showEnquiry() {
   if (!selectedDates || selectedDates.checkIn < localDate(new Date())) { openDates(true); return; }
   const details = ['Golden Fern Resort — availability enquiry', 'Check-in: ' + formatDate(selectedDates.checkIn), 'Check-out: ' + formatDate(selectedDates.checkOut), 'Room: ' + (selectedRoom || 'Please recommend a room'), '', 'Please confirm availability, the current tariff and booking terms for this stay.'].join('\n');
-  showDetails('Enquire about your stay', 'Send your selected dates to goldenfern@ecohospitality.in. The hotel will confirm availability and the current tariff; your stay is confirmed only after the hotel completes your booking.');
-  summary.textContent = details;
-  summary.hidden = actions.hidden = false;
-  draft.href = 'mailto:goldenfern@ecohospitality.in?subject=' + encodeURIComponent('Golden Fern stay enquiry' + (selectedRoom ? ' — ' + selectedRoom : '')) + '&body=' + encodeURIComponent(details);
+  prepareEmailEnquiry({
+    heading: 'Enquire about your stay',
+    message: 'Send your selected dates to goldenfern@ecohospitality.in. The hotel will confirm availability and the current tariff; your stay is confirmed only after the hotel completes your booking.',
+    details,
+    subject: 'Golden Fern stay enquiry' + (selectedRoom ? ' — ' + selectedRoom : ''),
+  });
 }
 booking.addEventListener('submit', event => { event.preventDefault(); showEnquiry(); });
 for (const button of document.querySelectorAll('[data-room]')) {

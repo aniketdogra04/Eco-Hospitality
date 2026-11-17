@@ -89,3 +89,11 @@ Open `/code/hotels/golden-fern-classic.html`. Source: [Hotel - Single room](http
 The page reuses hotel chrome, booking/date validation, gallery dialogs, card carousels and animations. Room copy styles are shared in `hotel.css`; the detail layout lives in `single-room.css`. Both “Book now” buttons and the availability form prepare an email enquiry for the Classic Room to `goldenfern@ecohospitality.in`. No booking is confirmed or email sent by the site.
 
 The exact portrait, gallery and recommendation photo crops are local assets. Repeated gallery images, the duplicated executive photo, recommendation titles and conflicting feature chips/descriptive room sizes follow Figma. “Other rooms” cards are fully clickable, with accessible names indicating their actual destination.
+
+## Hotel dining — Golden Fern Resort
+
+Open `/code/hotels/golden-fern-dining.html`. Source: [Hotel - Dining](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1084-18155). Uses shared hotel navigation, stay/date enquiries, gallery dialogs and scroll animations. The Dining navigation entry on all implemented hotel pages opens this page. Page-specific styles and table enquiries live in `code/hotels/dining.css` and `dining.js`. New photo crops live in `assets/hotels/golden-fern/`; all eight gallery assets are reused.
+
+Both “Book your table” buttons open the same enquiry form. It validates name, email, date, time and guest count, preserves entered details, and prepares a copyable email draft to `goldenfern@ecohospitality.in`. The visitor sends the draft from their email app; the restaurant confirms availability. Stay availability remains the existing separate hotel enquiry flow.
+
+The hero spelling (“Dinning”, “fern reosrt”), reused stay description, pasta photograph in the traditional-cuisine section, and mixed gallery imagery preserve the supplied Figma frame.
