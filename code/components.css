@@ -241,3 +241,11 @@
 .booking-dates { padding-left: 0; }
 .booking-submit { width: 100%; margin-left: 0; padding-block: 12px; }
 }
+
+/* One native link covers each hotel listing card, including its photo and title. */
+.hotel-link-card { position: relative; }
+.hotel-card-link::before { position: absolute; inset: 0; z-index: 1; border-radius: 2px; content: ""; }
+.hotel-link-card:has(.hotel-card-link:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
+.hotel-card-link:focus-visible { outline: none; }
+.hotel-link-card .listing-photo img { transition: transform 350ms ease; }
+.hotel-link-card:hover .listing-photo img { transform: scale(1.025); }
