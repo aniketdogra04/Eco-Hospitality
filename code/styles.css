@@ -22,53 +22,6 @@
 
 .hero-facts strong { font-size: 18px; }
 
-.booking-wrap {
-  position: relative;
-  z-index: 1;
-  width: min(788px, calc(100% - 2 * var(--gutter)));
-  margin: -44px auto 0;
-  padding-bottom: var(--section-space);
-}
-
-.booking-form {
-  display: grid;
-  grid-template-columns: minmax(220px, 1fr) 272px auto;
-  align-items: center;
-  padding: 14px 14px 14px 32px;
-  border-radius: 999px;
-  background: white;
-  box-shadow: 0 12px 25px rgb(0 0 0 / .12);
-}
-
-.booking-field { display: grid; gap: 6px; min-width: 0; }
-
-.booking-field > span { color: #6d7067; font-size: 14px; font-weight: 500; }
-
-.booking-destination { border-right: 1px solid #cfcfc8; padding-right: 24px; }
-
-.booking-dates { padding-left: 24px; }
-
-.booking-field select, .date-trigger {
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  color: #22251f;
-  font-weight: 500;
-  text-align: left;
-}
-
-.booking-field select {
-  width: 100%;
-  appearance: none;
-  padding-right: 26px;
-  background: url("../assets/chevron.svg") no-repeat right center;
-  cursor: pointer;
-}
-
-.date-trigger { display: flex; align-items: center; gap: 8px; }
-
-.booking-submit { min-width: 188px; margin-left: 24px; padding-block: 16px; }
-
 .intro { padding-bottom: calc(var(--section-space) + 20px); text-align: center; }
 
 .intro-copy { max-width: 726px; margin-inline: auto; }
@@ -184,12 +137,6 @@
 
 .editorial-note span { display: block; margin-top: 5px; font-size: 12px; font-weight: 500; line-height: 1.25; letter-spacing: .2px; text-transform: uppercase; }
 
-.date-inputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-
-.date-inputs label { display: grid; gap: 6px; min-width: 0; font-size: 14px; font-weight: 500; }
-
-.date-inputs input { width: 100%; min-width: 0; padding: 10px; border: 1px solid #b3b7a4; border-radius: 4px; color: var(--ink); background: white; }
-
 @media (max-width: 1040px) {
 .experience { grid-template-columns: 45% 1fr; }
 
@@ -199,19 +146,9 @@
 
 .editorial-dining .editorial-note { right: -24px; }
 
-
 }
 
 @media (max-width: 860px) {
-.booking-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) auto; padding-left: 20px; }
-
-.booking-destination { padding-right: 12px; }
-
-.booking-dates { padding-left: 12px; }
-
-.booking-submit { min-width: 0; margin-left: 14px; padding-inline: 16px; }
-
-.booking-field :is(select, button) { font-size: 14px; }
 
 .destination-grid { grid-template-rows: repeat(2, 184px); }
 
@@ -228,7 +165,6 @@
 .editorial-note strong { font-size: 17px; }
 
 .editorial-note span { font-size: 10px; }
-
 
 }
 
@@ -252,16 +188,6 @@
 .hero-facts p + p { padding-left: 10px; }
 
 .hero-facts strong { font-size: 16px; }
-
-.booking-wrap { margin-top: -28px; }
-
-.booking-form { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px; border-radius: 16px; }
-
-.booking-destination { padding: 0 0 12px; border-right: 0; border-bottom: 1px solid var(--line); }
-
-.booking-dates { padding-left: 0; }
-
-.booking-submit { width: 100%; margin-left: 0; padding-block: 12px; }
 
 .intro { padding-bottom: var(--section-space); }
 
@@ -304,6 +230,5 @@
 .editorial-dining .editorial-note { right: 12px; }
 
 .editorial .editorial-note { top: 12px; width: fit-content; max-width: calc(100% - 24px); }
-
 
 }

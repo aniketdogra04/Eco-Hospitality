@@ -21,6 +21,8 @@ No build step or package installation is required.
 - `code/global.css`: design tokens, reset, typography, buttons, navigation, footer and dialogs.
 - `code/components.css`: reusable banners, hotel cards, destination cards and FAQs, including responsive styles.
 - `code/shared.js`: responsive navigation, section reveals, word animations and number counters. Respects reduced motion.
+- `code/testimonials.css`, `code/testimonials.js`: the shared guest-story carousel, including smooth transitions and reduced-motion support.
+- `code/hotels/`: hotel pages and shared hotel layouts/interactions; property assets live in `assets/hotels/`.
 - `code/index.html`, `code/styles.css`, `code/main.js`: homepage content, layout and booking interactions.
 - `code/destinations/shimla.html`, `shimla.css`, `shimla.js`: destination content, layout and interactions.
 
@@ -63,3 +65,13 @@ The updated “Choose where the conversation begins” section reuses shared typ
 Open `http://localhost:8000/code/blog.html`. Page-specific CSS and JavaScript live in `code/blog/`; the exact story-photo crops live in `assets/blog/`. The botanical hero, card components and animation module are shared with the rest of the site.
 
 Source: [Design → New design → Blogs](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1065-8625). All nine cards preserve the supplied order, categories, titles and dates. Read-story buttons open accessible previews; full article bodies were not supplied. The homepage links can open a matching preview with `?story=morning`, `?story=lighter` or `?story=food`; unknown values leave the listing visible. Replace the preview content or route these buttons to full article pages when article copy is available.
+
+## Hotel homepage — Golden Fern Resort
+
+Open `http://localhost:8000/code/hotels/golden-fern.html`. Hotel-specific CSS and JavaScript live beside it in `code/hotels/`. Amenity icons are shared in `assets/hotels/icons/`; new property photos and the map live in `assets/hotels/golden-fern/`. Existing hotel, wedding, gallery, arrow and logo assets are reused. Golden Fern footer links throughout the site open this page.
+
+Source: [Design → New design → Hotel - Homepage](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1071-12042). Reuses global typography, spacing, animation, booking, gallery, FAQ and guest-story components. The hotel navigation targets sections on this page; Experiences opens the existing site section, and the desktop menu opens the corporate navigation. Separate hotel subpages remain future work.
+
+Room and property carousels rotate the three supplied cards. Gallery photos open accessible dialogs. The two guest-story slots repeat the supplied review, following the owner's existing preference. Repeated room photographs, prices, property names, “Dinning” navigation label and the wedding section's dining copy follow the supplied frame.
+
+The date picker validates arrival and departure dates, then prepares a copyable email draft to the design's hotel address, `goldenfern@ecohospitality.in`, including the selected room when requested. The visitor sends it through their email app; live room inventory and checkout are not connected. Phone, email, wedding enquiry and Google Maps links are actionable. The map preserves the design's static image and opens the hotel location in Google Maps.
