@@ -1,0 +1,24 @@
+/* Gallery uses shared hotel chrome, photo buttons, dialogs and scroll motion. */
+.hotel-gallery-hero { position: relative; isolation: isolate; display: grid; align-items: center; min-height: 520px; }
+.hotel-gallery-hero > .cover { z-index: -1; }
+.hotel-gallery-hero h1 { margin-top: 20px; font-size: clamp(40px,5vw,56px); line-height: .8; letter-spacing: -1px; }
+.hotel-gallery-hero .hero-description { color: var(--body-color); }
+.hotel-photo-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.hotel-photo-grid .gallery-photo { display: block; width: 100%; aspect-ratio: 356/260; border-radius: 2px; }
+.hotel-photo-grid .gallery-photo:focus-visible { outline-offset: -4px; }
+.gallery-more { display: flex; justify-content: center; margin-top: 40px; }
+#hotel-dialog:has([data-full-photo]) { width: min(1100px,calc(100% - 32px)); }
+.gallery-viewer-controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.gallery-viewer-controls > p { color: var(--body-color); font-size: 14px; }
+#hotel-dialog:not(:has([data-full-photo])) .gallery-viewer-controls { display: none; }
+@media(max-width:860px) {
+ .hotel-photo-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:620px) {
+ .hotel-gallery-hero { min-height: 440px; padding-block: 48px; }
+ .hotel-gallery-hero > .cover { object-position: 62% center; }
+ .hotel-gallery-hero h1 { font-size: clamp(36px,10vw,48px); }
+ .hotel-gallery-hero .hero-description { max-width: 300px; }
+ .hotel-photo-grid { grid-template-columns: minmax(0,1fr); }
+ .gallery-more { margin-top: 28px; }
+}

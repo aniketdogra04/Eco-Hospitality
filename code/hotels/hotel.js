@@ -7,8 +7,8 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const booking = document.querySelector('#booking');
 const dateDialog = document.querySelector('#date-dialog');
 const dateForm = document.querySelector('#date-form');
-const checkIn = dateForm.elements.checkin;
-const checkOut = dateForm.elements.checkout;
+const checkIn = dateForm?.elements.checkin;
+const checkOut = dateForm?.elements.checkout;
 const range = document.querySelector('#date-range');
 const dialog = document.querySelector('#hotel-dialog');
 const title = document.querySelector('#dialog-title');
@@ -20,7 +20,7 @@ const draft = document.querySelector('#email-draft');
 const roomEnquiry = document.querySelector('#room-enquiry');
 const status = document.querySelector('#copy-status');
 let selectedDates = null;
-let selectedRoom = booking.dataset.roomName || '';
+let selectedRoom = booking?.dataset.roomName || '';
 let awaitingEnquiry = false;
 
 for (const button of document.querySelectorAll('[data-close]')) {
@@ -49,9 +49,9 @@ function openDates(forEnquiry = false) {
   syncCheckout();
   dateDialog.showModal();
 }
-booking.querySelector('.date-trigger').addEventListener('click', () => openDates());
-checkIn.addEventListener('change', syncCheckout);
-dateForm.addEventListener('submit', event => {
+booking?.querySelector('.date-trigger')?.addEventListener('click', () => openDates());
+checkIn?.addEventListener('change', syncCheckout);
+dateForm?.addEventListener('submit', event => {
   event.preventDefault();
   if (!dateForm.reportValidity()) return;
   selectedDates = { checkIn: checkIn.value, checkOut: checkOut.value };
@@ -87,7 +87,7 @@ function showEnquiry() {
     subject: 'Golden Fern stay enquiry' + (selectedRoom ? ' — ' + selectedRoom : ''),
   });
 }
-booking.addEventListener('submit', event => { event.preventDefault(); showEnquiry(); });
+booking?.addEventListener('submit', event => { event.preventDefault(); showEnquiry(); });
 for (const button of document.querySelectorAll('[data-room]')) {
   button.addEventListener('click', () => {
     selectedRoom = button.dataset.room;
