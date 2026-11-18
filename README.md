@@ -97,3 +97,11 @@ Open `/code/hotels/golden-fern-dining.html`. Source: [Hotel - Dining](https://ww
 Both “Book your table” buttons open the same enquiry form. It validates name, email, date, time and guest count, preserves entered details, and prepares a copyable email draft to `goldenfern@ecohospitality.in`. The visitor sends the draft from their email app; the restaurant confirms availability. Stay availability remains the existing separate hotel enquiry flow.
 
 The hero spelling (“Dinning”, “fern reosrt”), reused stay description, pasta photograph in the traditional-cuisine section, and mixed gallery imagery preserve the supplied Figma frame.
+
+## Hotel wedding — Golden Fern Resort
+
+Open `/code/hotels/golden-fern-wedding.html`. Source: [Hotel - Wedding](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1092-19283). The page reuses hotel navigation, stay/date enquiries, service rows, gallery dialogs, FAQs and the smooth guest-story carousel. All implemented hotel pages link to Wedding; the homepage wedding button links to its planning section. Page layouts and enquiries live in `code/hotels/wedding.css` and `wedding.js`; exact new photo crops live in `assets/hotels/golden-fern/`.
+
+Wedding buttons and the coordination card open a shared, validated enquiry form. The accommodation card opens Rooms & Suites. The form preserves entered details and prepares a copyable email draft to the property's existing address, `goldenfern@ecohospitality.in`. The visitor sends the draft from their email app; the hotel confirms availability. Corporate wedding enquiries retain their separately configured recipient.
+
+The reused stay description, cuisine copy in “Why shimla”, service text, gallery images, supplied capacity figures and “Weeding” heading follow the Figma frame. “Read more” jumps to the detailed venue section. The two guest-story slots repeat the supplied review as requested.

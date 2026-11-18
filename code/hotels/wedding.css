@@ -1,0 +1,62 @@
+/* Property wedding layouts compose shared hotel, service, gallery and story components. */
+.wedding-services-inner { padding-block: 20px; }
+.wedding-services .center-heading { max-width: 538px; }
+.wedding-services .center-heading > .eyebrow { margin-top: 0; }
+.wedding-services .center-heading h2 { margin-top: 16px; }
+.wedding-services .center-heading > p:last-child { margin-top: 24px; }
+.wedding-banner { position: relative; height: 580px; overflow: hidden; border-radius: 2px; }
+.wedding-row { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); align-items: center; }
+.wedding-row-reversed { grid-template-columns: minmax(0,538fr) minmax(0,444fr); }
+.wedding-photo { position: relative; height: 600px; overflow: hidden; border-radius: 2px; }
+.wedding-copy .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.wedding-copy h2 { margin-top: 18px; }
+.wedding-description { margin-top: 24px; color: var(--body-color); }
+.wedding-read-more { color: #737a45; font-weight: 600; }
+.wedding-read-more:hover { text-decoration: underline; }
+.wedding-copy .button { margin-top: 28px; }
+.wedding-highlights { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; margin-top: 40px; }
+.wedding-highlight { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: 360px; padding: 14px; border-radius: 2px; overflow: hidden; color: white; }
+.wedding-highlight > .cover { z-index: -2; transition: transform .4s ease; }
+.wedding-highlight::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(transparent 50.1%,rgb(38 39 23 / .8)); }
+.wedding-highlight > div { width: 100%; }
+.wedding-highlight h3 { border-bottom: 1px solid rgb(255 255 255 / .6); padding-bottom: 10px; font-size: 24px; line-height: 1.2; }
+.wedding-highlight p { padding: 8px 12px 0 0; font-size: 14px; }
+.wedding-card-action { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; }
+.wedding-card-action::after { content: ''; position: absolute; inset: 0; }
+.wedding-card-action > img { flex: none; }
+.wedding-highlight:hover > .cover { transform: scale(1.035); }
+.wedding-highlight:has(:focus-visible) { outline: 3px solid var(--olive); outline-offset: 4px; }
+.wedding-ideal { padding-top: var(--section-space); }
+.wedding-gallery { padding-block: calc(var(--section-space) + 20px); }
+.wedding-gallery .section-heading h2 { margin-top: 16px; }
+.wedding-gallery .gallery-photo:focus-visible { outline-offset: -4px; }
+.wedding-closing { min-height: 580px; }
+.wedding-closing::before { background: rgb(0 0 0 / .2); }
+.wedding-closing-copy { max-width: 560px; }
+.wedding-closing .eyebrow { color: #b7d37a; }
+.wedding-closing h2 { margin-top: 18px; font-size: clamp(36px,4.4vw,48px); letter-spacing: -.8px; }
+.wedding-closing .button { margin-top: 36px; }
+@media(max-width:860px) {
+ .wedding-row { gap: 32px; }
+ .wedding-photo { height: 560px; }
+ .wedding-banner { height: 440px; }
+ .wedding-highlight { min-height: 380px; }
+ .wedding-highlight h3 { font-size: 22px; }
+}
+@media(max-width:620px) {
+ .hotel-hero h1 { font-size: clamp(36px,10vw,48px); }
+ .wedding-services-inner { padding-block: 0; }
+ .wedding-row, .wedding-row-reversed { grid-template-columns: minmax(0,1fr); }
+ .wedding-photo { height: auto; aspect-ratio: 538/600; }
+ .wedding-row-reversed .wedding-copy { grid-row: 1; }
+ .wedding-banner { height: 320px; }
+ .wedding-highlights { grid-template-columns: minmax(0,1fr); margin-top: 26px; }
+ .wedding-highlight { min-height: 360px; }
+ .wedding-gallery .photo-2, .wedding-gallery .photo-7 { grid-column: auto; }
+ .wedding-closing { min-height: 480px; padding-block: 52px; }
+ .wedding-closing .cover { object-position: 60% center; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .wedding-highlight > .cover { transition: none; }
+ .wedding-highlight:hover > .cover { transform: none; }
+}
