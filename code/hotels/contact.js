@@ -3,6 +3,16 @@ import { prepareEmailEnquiry } from './hotel.js';
 const form = document.querySelector('#contact-enquiry');
 const recipient = 'sales@ecohospitality.in';
 
+// Only known experience links can seed an enquiry; keep visitor-entered text.
+const experience = new URLSearchParams(window.location.search).get('experience');
+const experienceMessages = {
+  spa: 'I would like to know more about The Spa at Golden Fern Resort. Please share available services, timings, prices and availability for my stay.',
+  more: 'I would like to learn about the experiences available during my stay at Golden Fern Resort. Please share the options and availability.',
+};
+if (Object.hasOwn(experienceMessages, experience) && !form.elements.message.value) {
+  form.elements.message.value = experienceMessages[experience];
+}
+
 for (const field of [form.elements.name, form.elements.phone, form.elements.message]) {
   field.addEventListener('input', () => field.setCustomValidity(''));
 }

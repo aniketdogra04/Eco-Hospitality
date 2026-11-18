@@ -60,7 +60,7 @@ dateForm?.addEventListener('submit', event => {
   if (awaitingEnquiry) showEnquiry();
 });
 
-function showDetails(name, text, image, fullPhoto = false) {
+export function showDetails(name, text, image, fullPhoto = false) {
   title.textContent = name;
   description.textContent = text;
   photo.hidden = !image;
