@@ -15,8 +15,8 @@
 .contact-socials { padding-top: 20px; }
 .contact-socials > p { font-size: var(--font-size-small); font-weight: 500; color: var(--body-color); }
 .contact-socials > div { display: flex; gap: 8px; margin-top: 12px; }
-.contact-socials button { display: grid; place-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid #cfcfc8; border-radius: 50%; background: transparent; }
-.contact-socials button:hover { background: var(--sage); }
+.contact-socials a { display: grid; place-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid #cfcfc8; border-radius: 50%; background: transparent; }
+.contact-socials a:hover { background: var(--sage); }
 .message-panel h2 { font-size: 28px; letter-spacing: -.3px; }
 .message-panel .enquiry-form { margin-top: 36px; }
 .message-panel .enquiry-form label { gap: 4px; }
