@@ -130,6 +130,14 @@ The frame's corporate office address, phone and sales email are preserved; an ac
 
 Open `/code/hotels/golden-fern-experiences.html`. Source: [Hotel - Experiences](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1131-10012). All hotel Experiences navigation entries open this page. Page layouts and actions live in `code/hotels/experiences.css` and `experiences.js`. The botanical hero, hotel chrome, typography, action icons, dialogs and scroll animations are shared. The exact spa crop is stored once in `assets/hotels/golden-fern/experience-spa.png` and reused in the four supplied slots.
 
-The frame supplies four repeated “The Spa” cards with placeholder descriptions. Those cards and their order are preserved pending final content. “Know more” opens an accessible spa preview with an enquiry link to Hotel Contact. No additional experience entries were supplied, so “Show more” opens a dialogue directing the visitor to ask the team about available experiences; it does not invent further offers or duplicate more cards.
+The frame supplies four repeated “The Spa” cards with placeholder descriptions. Those cards and their order are preserved pending final content. “Know more” opens the dedicated Spa detail page. No additional experience entries were supplied, so “Show more” opens a dialogue directing the visitor to ask the team about available experiences; it does not invent further offers or duplicate more cards.
 
 Known `?experience=spa` and `?experience=more` links prefill the Hotel Contact message with the relevant enquiry while preserving any existing text. Other values leave the form untouched. The visitor reviews and sends an email draft to Contact's existing `sales@ecohospitality.in` recipient; no email is sent automatically. The reusable hotel detail helper is exported for this page without changing existing booking or gallery behavior.
+
+## Hotel Experiences single — The Spa
+
+Open `/code/hotels/golden-fern-spa.html`. Source: [Hotel - Experiences single](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1173-8759). All four supplied Spa listing cards now have native “Know more” links to this page. The header keeps Experiences selected and links back to its listing. Spa-specific layouts live in `code/hotels/spa.css`; `hotel.js` supplies carousels, gallery dialogs, menus and shared animations.
+
+The exact hero, two treatment images and recommendation crop are local `assets/hotels/golden-fern/spa-*.png` assets. Image controls rotate the two photos, which open accessible full-photo dialogs. Related experience cards are clickable throughout and return to the corresponding entries in the listing; the design supplies three repeated Spa recommendations. FAQs use the shared native accordion; the experience-booking answer links to the existing Spa enquiry on Hotel Contact.
+
+Duration, timings and the starting price follow Figma. The reused room description in the hero, wedding copy in the Spa introduction and placeholder recommendation text are retained from the supplied frame pending final copy. No extra services, prices or booking guarantees are inferred.

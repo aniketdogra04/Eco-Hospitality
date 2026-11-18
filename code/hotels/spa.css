@@ -1,0 +1,40 @@
+/* Spa detail composes shared hotel chrome, carousel controls, gallery, cards and FAQs. */
+.spa-hero { min-height: 520px; }
+.spa-facts { padding-block: 40px; background: var(--white); }
+.spa-facts-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
+.spa-facts dt { color: var(--olive); font-size: 14px; font-weight: 600; line-height: 1.25; letter-spacing: 1px; text-transform: uppercase; }
+.spa-facts dd { margin-top: 8px; font-weight: 600; }
+.spa-introduction { padding-block: var(--section-space) 20px; }
+.spa-intro-copy { max-width: 726px; margin-inline: auto; text-align: center; }
+.spa-intro-copy h2 { margin-top: 20px; }
+.spa-description { margin-top: 28px; color: var(--body-color); }
+.spa-intro-copy blockquote { margin: 28px 0 0; color: var(--ink); font: italic 500 28px/.8 var(--serif); letter-spacing: -.3px; }
+.spa-intro-copy blockquote span { display: block; }
+.spa-intro-copy blockquote span + span { margin-top: 16px; }
+.spa-carousel-inner { padding-block: 20px; }
+.spa-carousel-inner .section-heading h2 { margin-top: 18px; }
+.spa-photo-carousel .card-track > article { position: relative; flex-basis: calc((100% - 24px) / 2); }
+.spa-gallery-photo { display: block; width: 100%; height: 360px; border-radius: 2px; }
+.spa-gallery-photo:focus-visible { outline-offset: -4px; }
+.spa-related .spa-carousel-inner { padding-block: 0; }
+.spa-related .section-heading h2 { margin-top: 20px; }
+.spa-related-card h3 { margin: 20px 0 0; font-size: 24px; letter-spacing: -.2px; }
+.spa-related-card > p { margin-top: 16px; padding-bottom: 20px; color: var(--body-color); }
+.spa-related-card .text-link { margin-top: auto; }
+@media(max-width:860px) {
+ .spa-facts-grid { gap: 28px; grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .spa-gallery-photo { height: 300px; }
+}
+@media(max-width:620px) {
+ .spa-hero { min-height: 500px; padding-block: 48px; }
+ .spa-facts { padding-block: 28px; }
+ .spa-facts-grid { gap: 24px 16px; }
+ .spa-facts dt { font-size: 11px; }
+ .spa-facts dd { font-size: 14px; }
+ .spa-intro-copy blockquote { font-size: 25px; line-height: 1.25; }
+ .spa-intro-copy blockquote span { display: inline; }
+ .spa-intro-copy blockquote span + span { margin-top: 0; }
+ .spa-carousel-inner { padding-block: 0; }
+ .spa-photo-carousel .card-track > article { flex-basis: 100%; }
+ .spa-gallery-photo { height: auto; aspect-ratio: 538/360; }
+}
