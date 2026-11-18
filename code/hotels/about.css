@@ -1,0 +1,50 @@
+/* Property About composes shared hotel chrome, booking, icons and guest stories. */
+.hotel-about-hero { position: relative; isolation: isolate; display: grid; align-items: center; min-height: 520px; }
+.hotel-about-hero > .cover { z-index: -1; }
+.hotel-about-hero h1 { margin-top: 20px; font-size: clamp(40px,5vw,56px); line-height: .8; letter-spacing: -1px; }
+.hotel-about-hero .hero-description { color: var(--body-color); }
+.hotel-about-story { padding-bottom: var(--section-space); }
+.hotel-about-row { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); align-items: center; gap: clamp(32px,8.2vw,118px); }
+.hotel-about-row-reversed { grid-template-columns: minmax(0,538fr) minmax(0,444fr); margin-top: var(--section-space); }
+.hotel-about-copy .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.hotel-about-copy h2 { margin-top: 18px; }
+.hotel-about-copy > p:not(.eyebrow), .hotel-about-description { margin-top: 24px; color: var(--body-color); }
+.hotel-about-description p + p { margin-top: 16px; }
+.hotel-about-photo { position: relative; height: 600px; overflow: hidden; border-radius: 2px; }
+.hotel-about-experience-inner { padding-block: 20px; }
+.hotel-about-experience .section-heading h2 { margin-top: 18px; max-width: 480px; }
+.hotel-about-weather { flex: none; text-align: right; color: var(--body-color); font-size: 14px; }
+.hotel-about-weather > p:first-child { color: var(--ink); font: italic 500 32px/1.25 var(--serif); letter-spacing: -.4px; }
+.hotel-about-features { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin-top: 40px; border: 1px solid #d1d7b8; border-radius: 2px; }
+.hotel-about-features > article { min-width: 0; padding: 40px; }
+.hotel-about-features > article + article { border-left: 1px solid #d1d7b8; }
+.hotel-about-features h3 { margin-top: 48px; font-size: 32px; letter-spacing: -.4px; }
+.hotel-about-features p { margin-top: 16px; color: var(--body-color); }
+.hotel-about-shimla { padding-top: var(--section-space); }
+@media(max-width:1100px) {
+ .hotel-about-features > article { padding: 28px; }
+ .hotel-about-features h3 { font-size: 28px; }
+}
+@media(max-width:860px) {
+ .hotel-about-row { gap: 32px; }
+ .hotel-about-photo { height: 560px; }
+ .hotel-about-features { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .hotel-about-features > article:nth-child(3) { border-left: 0; }
+ .hotel-about-features > article:nth-child(n+3) { border-top: 1px solid #d1d7b8; }
+ .hotel-about-features h3 { margin-top: 28px; }
+}
+@media(max-width:620px) {
+ .hotel-about-hero { min-height: 500px; padding-block: 48px 72px; }
+ .hotel-about-hero > .cover { object-position: 62% center; }
+ .hotel-about-hero h1 { font-size: clamp(36px,10vw,48px); }
+ .hotel-about-hero .hero-description { max-width: 300px; }
+ .hotel-about-row, .hotel-about-row-reversed { grid-template-columns: minmax(0,1fr); }
+ .hotel-about-photo { height: auto; aspect-ratio: 538/600; }
+ .hotel-about-row-reversed .hotel-about-copy { grid-row: 1; }
+ .hotel-about-experience-inner { padding-block: 0; }
+ .hotel-about-experience .section-heading h2 br { display: none; }
+ .hotel-about-weather { text-align: left; }
+ .hotel-about-features { grid-template-columns: minmax(0,1fr); margin-top: 26px; }
+ .hotel-about-features > article + article { border-left: 0; border-top: 1px solid #d1d7b8; }
+ .hotel-about-features h3 br { display: none; }
+}
