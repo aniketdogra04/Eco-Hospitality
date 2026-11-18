@@ -1,0 +1,14 @@
+/* Compose the shared Contact layout with hotel typography and the supplied map crop. */
+.hotel-contact-hero h1 { line-height: .8; }
+.hotel-contact-hero .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.hotel-contact-hero .hero-description { margin-bottom: 0; color: var(--body-color); }
+.hotel-contact-map { position: relative; display: block; height: 400px; margin-top: 36px; overflow: hidden; border-radius: 2px; }
+.hotel-contact-map .cover { transition: filter 350ms ease; }
+.hotel-contact-map:hover .cover { filter: brightness(.97); }
+@media(max-width:620px) {
+ .hotel-contact-map { height: 300px; margin-top: 26px; }
+ .hotel-contact-hero .hero-description br { display: none; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .hotel-contact-map .cover { transition: none; }
+}

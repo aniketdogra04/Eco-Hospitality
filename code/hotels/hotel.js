@@ -71,11 +71,11 @@ function showDetails(name, text, image, fullPhoto = false) {
   status.textContent = '';
   dialog.showModal();
 }
-export function prepareEmailEnquiry({ heading, message, details, subject }) {
+export function prepareEmailEnquiry({ heading, message, details, subject, recipient = 'goldenfern@ecohospitality.in' }) {
   showDetails(heading, message);
   summary.textContent = details;
   summary.hidden = actions.hidden = false;
-  draft.href = 'mailto:goldenfern@ecohospitality.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(details);
+  draft.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(details);
 }
 function showEnquiry() {
   if (!selectedDates || selectedDates.checkIn < localDate(new Date())) { openDates(true); return; }
