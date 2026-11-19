@@ -7,7 +7,7 @@
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 28px; }
 .hero-actions .text-link { align-self: center; }
 .button-sage { background: #d2e4ab; color: var(--ink); }
-.button-sage:hover { background: var(--white); }
+.button-sage:hover { background: #f5f9ed; }
 .button-sage::after { content: url('../../assets/arrow-dark.svg'); }
 .about-layout { display: grid; grid-template-columns: 420fr 538fr; gap: clamp(32px, 9.8vw, 142px); }
 .about-copy { color: var(--body-color); }

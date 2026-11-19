@@ -44,7 +44,7 @@
 .about-closing .closing-copy > p:not(.eyebrow) { max-width: 570px; margin-top: 18px; color: #f7f7f4; }
 .about-closing .button { margin-top: 28px; }
 .button-sage { color: var(--ink); background: #d2e4ab; }
-.button-sage:hover { background: var(--white); }
+.button-sage:hover { background: #f5f9ed; }
 .button-sage::after { content: url('../../assets/arrow-dark.svg'); }
 @media(max-width:1040px) {
  .place-link { grid-template-columns: 30px 110px minmax(0,1fr) 20px; }
