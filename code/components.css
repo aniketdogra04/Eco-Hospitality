@@ -76,6 +76,8 @@
 
 .closing { min-height: clamp(430px, 42vw, 600px); }
 
+.closing.image-banner::before { background: rgb(0 0 0 / .2); }
+
 .closing .eyebrow { color: #b7d37a; }
 
 .closing .eyebrow + h2 { margin-top: 18px; }
