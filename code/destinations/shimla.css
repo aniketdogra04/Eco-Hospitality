@@ -93,3 +93,12 @@
   .other-card { min-height: 300px; }
   .closing { min-height: 390px; }
 }
+
+/* Exact Figma styling scoped to the other-destination cards. */
+#other-destinations h2 { margin-top: 18px; }
+#other-destinations .other-card::before { background: linear-gradient(to bottom, rgb(38 39 23 / 0) 50.104%, rgb(38 39 23 / .8)); }
+#other-destinations .other-card h3 { font-size: 24px; line-height: 28.8px; letter-spacing: 0; align-items: center; }
+#other-destinations .other-card h3 span { flex: none; background-image: url('../../assets/destinations/shimla/arrow-up-right.svg'); }
+#other-destinations .other-card p { padding-right: 12px; }
+#other-destinations .other-card::before { z-index: 0; }
+#other-destinations .other-card > div { position: relative; z-index: 1; }
