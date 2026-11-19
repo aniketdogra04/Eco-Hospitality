@@ -31,6 +31,8 @@
 .room-comparison tbody th { padding-block: 24.5px; font: italic 500 24px/34.5px var(--serif); letter-spacing: -.2px; }
 .room-comparison td { color: #d7d9d0; font-size: 14px; }
 .comparison-price { display: inline-flex; gap: 6px; align-items: center; color: #d2e4ab; font-size: 16px; font-weight: 700; }
+.comparison-price img { transition: transform 350ms ease; }
+.comparison-price:hover img, .comparison-price:focus-visible img { transform: rotate(45deg); }
 .room-comparison a:hover { text-decoration: underline; }
 .room-comparison :focus-visible { outline-color: var(--focus-ring-light); }
 .room-essentials .section-heading h2 { margin-top: 18px; padding-bottom: 13px; }
