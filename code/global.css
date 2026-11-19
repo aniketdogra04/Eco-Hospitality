@@ -96,6 +96,9 @@ img { display: block; max-width: 100%; }
 
 .image-banner :focus-visible, .experience :focus-visible, .site-footer :focus-visible { outline-color: var(--focus-ring-light); }
 
+.pointer-input :focus-visible,
+:root.pointer-input :is(.hotel-link-card, .wedding-highlight):has(:focus-visible) { outline: none; }
+
 .container { width: min(var(--max-width), calc(100% - 2 * var(--gutter))); margin-inline: auto; }
 
 .section { padding-block: var(--section-space); }

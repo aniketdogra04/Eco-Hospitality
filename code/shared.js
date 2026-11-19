@@ -1,3 +1,12 @@
+// Native selects and text fields can match :focus-visible after a click.
+// Suppress the click/tap outline and restore keyboard focus when tabbing.
+document.addEventListener("pointerdown", () => {
+  document.documentElement.classList.add("pointer-input");
+}, true);
+document.addEventListener("keydown", event => {
+  if (event.key === "Tab") document.documentElement.classList.remove("pointer-input");
+}, true);
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#main-nav");
 const mobileNavigation = window.matchMedia("(max-width: 860px)");
