@@ -163,7 +163,7 @@ h3 { font-size: var(--font-size-h3); letter-spacing: -.2px; }
 .text-link:hover::after, .text-link:focus-visible::after { transform: rotate(45deg); }
 
 .button-sage { background: #d2e4ab; color: var(--ink); }
-.button-sage:hover { background: var(--sage); }
+.button-sage:hover { background: var(--white); }
 .button-sage::after { content: url("../assets/arrow-dark.svg"); }
 
 .button-light { color: var(--ink); background: var(--white); }

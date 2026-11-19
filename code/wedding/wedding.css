@@ -7,7 +7,7 @@
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin-top: 28px; }
 .hero-actions .text-link { align-self: center; }
 .button-sage { color: var(--ink); background: #d2e4ab; }
-.button-sage:hover { background: var(--sage); }
+.button-sage:hover { background: var(--white); }
 .button-sage::after { content: url('../../assets/arrow-dark.svg'); }
 .intro-layout, .setting-layout, .enquiry-layout { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); }
 .wedding-intro { padding-bottom: 0; }
