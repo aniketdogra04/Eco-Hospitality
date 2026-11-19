@@ -54,7 +54,6 @@
 .other-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .other-card { min-height: 360px; }
 .other-card h3 { display: flex; justify-content: space-between; }
-.other-card h3 span { width: 24px; height: 24px; font-size: 0; background: url('../../assets/arrow-light.svg') center/24px no-repeat; }
 .closing { min-height: 580px; }
 .closing::before { background: rgb(0 0 0 / .2); }
 @media (max-width: 860px) {
@@ -98,7 +97,7 @@
 #other-destinations h2 { margin-top: 18px; }
 #other-destinations .other-card::before { background: linear-gradient(to bottom, rgb(38 39 23 / 0) 50.104%, rgb(38 39 23 / .8)); }
 #other-destinations .other-card h3 { font-size: 24px; line-height: 28.8px; letter-spacing: 0; align-items: center; }
-#other-destinations .other-card h3 span { flex: none; background-image: url('../../assets/destinations/shimla/arrow-up-right.svg'); }
 #other-destinations .other-card p { padding-right: 12px; }
 #other-destinations .other-card::before { z-index: 0; }
 #other-destinations .other-card > div { position: relative; z-index: 1; }
+.other-card h3 .other-card-arrow { flex: none; }
