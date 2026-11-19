@@ -10,6 +10,7 @@
 .hero-title-line + .hero-title-line { margin-top: 16px; }
 .hero-description { max-width: 570px; margin-top: 28px; color: #eef0e8; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; margin-top: 28px; }
+.hero-actions .text-link { align-self: center; align-items: center; }
 .hero-rating { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 28px; }
 .hero-rating p { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; line-height: 1.25; }
 .hero-rating strong { font-size: 18px; font-weight: 700; }
