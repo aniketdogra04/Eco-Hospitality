@@ -22,7 +22,8 @@
 <img src="../../assets/logo-header.svg" alt="Eco Hospitality home" width="145" height="51">
 </a>
 <button class="menu-toggle" type="button" aria-label="Hotel menu" aria-expanded="false" aria-controls="main-nav">
-<img src="../../assets/hotels/icons/list.svg" alt="" width="24" height="24">
+<img class="menu-open-icon" src="../../assets/hotels/icons/list.svg" alt="" width="24" height="24">
+<img class="menu-close-icon" src="../../assets/hotels/icons/x.svg" alt="" width="24" height="24">
 </button>
 <nav class="main-nav" id="main-nav" aria-label="Hotel navigation">
 <a href="golden-fern.html">Home</a>
@@ -34,8 +35,9 @@
 <a href="golden-fern-about.html">About</a>
 <a href="golden-fern-contact.html">Contact</a>
 </nav>
-<button class="site-menu-button" type="button" data-site-menu aria-label="Explore Eco Hospitality" aria-haspopup="dialog">
-<img src="../../assets/hotels/icons/list.svg" alt="" width="24" height="24">
+<button class="site-menu-button" type="button" data-site-menu aria-label="Explore Eco Hospitality" aria-expanded="false" aria-controls="site-menu">
+<img class="menu-open-icon" src="../../assets/hotels/icons/list.svg" alt="" width="24" height="24">
+<img class="menu-close-icon" src="../../assets/hotels/icons/x.svg" alt="" width="24" height="24">
 </button>
 </div>
 </header>
@@ -214,22 +216,22 @@
 </p>
 </div>
 </dialog>
-<dialog id="site-menu" aria-labelledby="site-menu-title">
-<div class="dialog-content">
-<div class="dialog-heading">
-<h2 id="site-menu-title">Explore Eco Hospitality</h2>
-<button class="dialog-close" type="button" data-close aria-label="Close site menu">×</button>
+<nav id="site-menu" class="dropdown-panel hotel-site-dropdown" popover="manual" aria-label="Eco Hospitality pages">
+<a href="../index.html">Home - Eco Hospitality</a>
+<details class="other-properties-menu" open>
+<summary>Other Properties<img src="../../assets/hotels/icons/caret-up.svg" alt="" width="20" height="20"></summary>
+<div class="other-properties-links">
+<a href="../index.html?destination=Shimla#hotels">Shimla Havens Resort</a>
+<a href="../index.html?destination=Shimla#hotels">Hotel Woodrina, Shimla</a>
+<a href="../index.html?destination=Dalhousie#hotels">SS Resort, Dalhousie</a>
+<a href="../index.html?destination=Dalhousie#hotels">Hotel Snow Castle, Dalhousie</a>
+<a href="../index.html?destination=Spiti#hotels">Mahamaya Regency, Kaza</a>
+<a href="../index.html?destination=Spiti#hotels">Maitreya Regency, Tabo</a>
+<a href="../index.html?destination=Spiti#hotels">Maitreya Mud House, Tabo</a>
 </div>
-<nav class="site-menu-links" aria-label="Eco Hospitality pages">
-<a href="../index.html">Homepage</a>
-<a href="../destinations/shimla.html">Shimla</a>
-<a href="../dining.html">Dining</a>
-<a href="../wedding.html">Wedding</a>
+</details>
 <a href="../blog.html">Blogs</a>
-<a href="../about.html">About</a>
-<a href="../contact.html">Contact</a>
+<a href="../about.html">About Eco Hospitality</a>
 </nav>
-</div>
-</dialog>
 </body>
 </html>

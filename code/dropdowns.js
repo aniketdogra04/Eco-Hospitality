@@ -9,20 +9,21 @@ function closeActive(restore = false) { if (active) { const current = active; ac
 function position(panel, trigger) {
   const r = trigger.getBoundingClientRect();
   panel.style.maxHeight = (innerHeight - 16) + 'px';
-  panel.style.left = Math.max(8, Math.min(r.left, innerWidth - panel.offsetWidth - 8)) + 'px';
+  const left = panel.matches('.hotel-site-dropdown') ? r.right - panel.offsetWidth : r.left;
+  panel.style.left = Math.max(8, Math.min(left, innerWidth - panel.offsetWidth - 8)) + 'px';
   const below = r.bottom + 10;
   const above = r.top - panel.offsetHeight - 10;
   const top = below + panel.offsetHeight <= innerHeight - 8 ? below : above >= 8 ? above : Math.max(8, innerHeight - panel.offsetHeight - 8);
   panel.style.top = top + 'px';
 }
-function popup(trigger, panel) {
+function popup(trigger, panel, onToggle = () => {}) {
   panel.popover = 'manual';
   document.body.append(panel);
   trigger.setAttribute('aria-expanded', 'false');
   trigger.setAttribute('aria-controls', panel.id);
   const controller = {
-    open() { if (active === controller) return; closeActive(); panel.showPopover(); trigger.setAttribute('aria-expanded', 'true'); position(panel, trigger); active = controller; },
-    close(restore) { panel.hidePopover(); trigger.setAttribute('aria-expanded', 'false'); if (restore) trigger.focus(); },
+    open() { if (active === controller) return; closeActive(); panel.showPopover(); trigger.setAttribute('aria-expanded', 'true'); position(panel, trigger); active = controller; onToggle(true); },
+    close(restore) { panel.hidePopover(); trigger.setAttribute('aria-expanded', 'false'); onToggle(false); if (restore) trigger.focus(); },
     panel, trigger,
   };
   const hoverMenu = trigger.matches('.nav-dropdown-trigger');
@@ -49,10 +50,10 @@ function popup(trigger, panel) {
     active === controller ? closeActive() : controller.open();
   });
   trigger.addEventListener('keydown', event => {
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); controller.open(); const items = panel.querySelectorAll('a,button'); items[event.key === 'ArrowUp' ? items.length - 1 : 0]?.focus(); }
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); controller.open(); const items = panel.querySelectorAll('a,button,summary'); items[event.key === 'ArrowUp' ? items.length - 1 : 0]?.focus(); }
   });
   panel.addEventListener('keydown', event => {
-    const items = [...panel.querySelectorAll('a,button:not(:disabled)')];
+    const items = [...panel.querySelectorAll('a,button:not(:disabled),summary')];
     const index = items.indexOf(document.activeElement);
     const next = event.key === 'ArrowDown' ? (index + 1) % items.length : event.key === 'ArrowUp' ? (index - 1 + items.length) % items.length : event.key === 'Home' ? 0 : event.key === 'End' ? items.length - 1 : null;
     if (next !== null) { event.preventDefault(); items[next]?.focus(); }
@@ -188,4 +189,11 @@ export function openDatePicker(dialog, trigger) {
   }
   // Submit through the existing date form without opening its former modal.
   calendar.open();
+}
+
+export function initHotelMenu(trigger, panel) {
+  popup(trigger, panel, open => {
+    trigger.setAttribute('aria-label', open ? 'Close Eco Hospitality menu' : 'Explore Eco Hospitality');
+  });
+  panel.addEventListener('click', event => { if (event.target.closest('a')) closeActive(true); });
 }

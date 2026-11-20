@@ -157,3 +157,7 @@ The shared single-month calendar is opened by the homepage and Individual hotel 
 ### Split-section motion
 
 `shared.js` applies the homepage's horizontal reveal to paired image/text sections on hotel home, Dining, Wedding, About, Rooms and Experiences pages, plus the corresponding Eco Hospitality sections. Panel directions follow their rendered desktop positions, including reversed grids. Nested content shares its panel's entrance rather than sliding twice. The shared duration and easing remain unchanged; small-screen offsets fit the page gutter, full-width colored sections clip their entrances, and reduced-motion users receive fully visible content without reveals.
+
+### Individual hotel header menu
+
+The hotel header's Eco Hospitality menu uses [Dropdown - menu icon (Individual hotel)](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1209-9904). It opens a compact, right-aligned dropdown with Home, expandable Other Properties, Blogs and About links. `initHotelMenu` in `dropdowns.js` shares dismissal and keyboard behavior with the other dropdowns. The original dialog has been replaced on all ten hotel pages. The exact Figma X and caret assets live in `assets/hotels/icons/`; the header button swaps its menu/X images through `aria-expanded`. Mobile hotel navigation also swaps to X while open.

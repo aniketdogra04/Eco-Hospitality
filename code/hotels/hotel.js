@@ -1,4 +1,4 @@
-import { openDatePicker } from "../dropdowns.js";
+import { openDatePicker, initHotelMenu } from "../dropdowns.js";
 import '../shared.js';
 import { initGuestStories } from '../testimonials.js';
 
@@ -27,7 +27,7 @@ let awaitingEnquiry = false;
 for (const button of document.querySelectorAll('[data-close]')) {
   button.addEventListener('click', () => button.closest('dialog').close());
 }
-document.querySelector('[data-site-menu]').addEventListener('click', () => document.querySelector('#site-menu').showModal());
+initHotelMenu(document.querySelector('[data-site-menu]'), document.querySelector('#site-menu'));
 
 export function localDate(date) {
   return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('-');

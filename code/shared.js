@@ -16,6 +16,7 @@ const mobileNavigation = window.matchMedia("(max-width: 860px)");
 function setMenu(open) {
   navigation.classList.toggle("is-open", open);
   menuToggle.setAttribute("aria-expanded", String(open));
+  if (menuToggle.closest(".hotel-header")) menuToggle.setAttribute("aria-label", open ? "Close hotel menu" : "Hotel menu");
 }
 
 menuToggle.addEventListener("click", () => {
