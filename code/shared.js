@@ -1,3 +1,5 @@
+import "./dropdowns.js";
+
 // Native selects and text fields can match :focus-visible after a click.
 // Suppress the click/tap outline and restore keyboard focus when tabbing.
 document.addEventListener("pointerdown", () => {

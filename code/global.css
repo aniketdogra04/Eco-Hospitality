@@ -331,3 +331,32 @@ dialog::backdrop { background: rgb(26 27 13 / .65); }
     100% { opacity: 1; transform: translateY(0); }
   }
 }
+
+/* Shared Figma dropdown components: header navigation, destinations and dates. */
+.nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 4px; border: 0; padding: 0; background: none; font: inherit; }
+.nav-dropdown-trigger::after, .destination-trigger::after { content: ''; flex: 0 0 18px; width: 18px; height: 18px; background: url('../assets/chevron.svg') center/contain no-repeat; transition: transform 220ms ease; }
+:is(.nav-dropdown-trigger,.destination-trigger)[aria-expanded="true"]::after { transform: rotate(180deg); }
+.dropdown-panel, .calendar-panel { position: fixed; inset: auto; z-index: 20; margin: 0; border: 0; border-radius: 2px; background: var(--white); color: var(--ink); box-shadow: 0 6px 24px rgb(0 0 0 / .1); overflow: auto; }
+.dropdown-panel { width: min(257.94px, calc(100vw - 16px)); padding: 6px; }
+.dropdown-panel > :is(a,button) { display: block; width: 100%; border: 0; border-radius: 999px; padding: 6px 12px; background: transparent; color: var(--ink); text-align: left; font: 400 16px/26px var(--sans); white-space: nowrap; }
+.dropdown-panel > :is(a,button):is(:hover,:focus-visible) { background: #efefea; outline-offset: -2px; }
+.destination-select::after { display: none; }
+.destination-trigger { display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; padding: 0; border: 0; background: transparent; color: #22251f; font-weight: 500; text-align: left; }
+.dropdown-native { position: absolute; width: 1px !important; height: 1px; opacity: 0; pointer-events: none; }
+.calendar-panel { width: min(460px, calc(100vw - 16px)); padding: 20px; }
+.calendar-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.calendar-heading strong { color: #313715; font: 600 20px/32px var(--sans); }
+.calendar-heading button { display: grid; place-items: center; flex: 0 0 38px; width: 38px; height: 38px; border: 1px solid #e2e2dc; border-radius: 50%; background: white; padding: 0; }
+.calendar-heading button:hover { background: var(--sage); }
+.calendar-weekdays { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); margin-top: 28px; color: #7b7d75; font: 500 14px/22px var(--sans); text-align: center; }
+.calendar-days { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); margin-top: 28px; }
+.calendar-days button { min-width: 0; height: 50px; border: 0; padding: 0; background: none; color: #11120e; font: 400 16px/26px var(--sans); border-radius: 999px; }
+.calendar-days button:disabled, .calendar-heading button:disabled { opacity: .35; cursor: default; }
+.calendar-days button:not(:disabled):hover { background: #efefea; }
+.calendar-days button.in-range { border-radius: 0; background: #e7e9d9; }
+.calendar-days button.selected, .calendar-days button.selected:hover { background: var(--olive); color: white; }
+@media(max-width:860px) { .main-nav .nav-dropdown-trigger { padding: 10px 12px; } }
+@media(max-width:480px) { .calendar-panel { padding: 16px; } .calendar-days button { height: 44px; } .calendar-heading strong { font-size: 18px; } }
+@media(prefers-reduced-motion:reduce) { .nav-dropdown-trigger::after, .destination-trigger::after { transition: none; } }
+
+.calendar-panel .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }

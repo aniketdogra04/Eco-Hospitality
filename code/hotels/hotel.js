@@ -1,3 +1,4 @@
+import { openDatePicker } from "../dropdowns.js";
 import '../shared.js';
 import { initGuestStories } from '../testimonials.js';
 
@@ -47,7 +48,7 @@ function openDates(forEnquiry = false) {
   checkIn.value = selectedDates?.checkIn || '';
   checkOut.value = selectedDates?.checkOut || '';
   syncCheckout();
-  dateDialog.showModal();
+  openDatePicker(dateDialog, booking.querySelector('.date-trigger'));
 }
 booking?.querySelector('.date-trigger')?.addEventListener('click', () => openDates());
 checkIn?.addEventListener('change', syncCheckout);
