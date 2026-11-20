@@ -1,8 +1,9 @@
 /* Property dining layouts compose shared hotel and gallery components. */
+main .eyebrow { font-size: 14px; }
 .dining-row { display: grid; grid-template-columns: minmax(0,444fr) minmax(0,538fr); gap: clamp(32px,8.2vw,118px); align-items: center; }
 .dining-row-reversed { grid-template-columns: minmax(0,538fr) minmax(0,444fr); }
 .dining-photo { position: relative; height: 600px; overflow: hidden; border-radius: 2px; }
-.dining-copy .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
+.dining-copy .eyebrow { font-size: 14px; line-height: 15px; letter-spacing: 1.2px; }
 .dining-copy h2 { margin-top: 18px; }
 .dining-description { margin-top: 24px; color: var(--body-color); }
 .dining-copy .button { margin-top: 28px; }
