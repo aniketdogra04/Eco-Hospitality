@@ -25,7 +25,6 @@
 .map-heading { max-width: 351px; }
 .map-embed { display: block; position: relative; height: 400px; margin-top: 36px; overflow: hidden; border-radius: 2px; background: var(--sage); }
 .map-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
-.map-actions { display: flex; justify-content: flex-end; margin-top: 12px; }
 .conversation-section .section-heading h2 { max-width: 430px; margin-top: 18px; color: var(--heading-ink); }
 .conversation-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 40px; border: 1px solid #d1d7b8; border-radius: 2px; }
 .conversation-grid article { display: flex; flex-direction: column; align-items: flex-start; padding: 40px; min-width: 0; min-height: 272px; }
