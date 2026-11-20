@@ -204,7 +204,8 @@ h3 { font-size: var(--font-size-h3); letter-spacing: -.2px; }
 
 .main-nav :is(a, .nav-dropdown-trigger):hover { color: var(--olive-hover); }
 
-.header-booking { line-height: 1.25; }
+.header-booking { line-height: 1.6; text-align: center; }
+.header-booking::after { content: ''; flex: 0 0 20px; background: url('../assets/arrow-light.svg') center / 20px 20px no-repeat; }
 
 .menu-toggle { display: none; }
 
