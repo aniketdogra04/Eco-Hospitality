@@ -13,6 +13,7 @@
 .room-row.reversed { grid-template-columns: minmax(0,444fr) minmax(0,538fr); }
 .room-row.reversed .room-photo { grid-column: 2; grid-row: 1; }
 .room-row.reversed .room-copy { grid-column: 1; grid-row: 1; }
+.room-copy .eyebrow { font-size: 14px; }
 .room-photo { position: relative; height: 480px; padding: 14px; border-radius: 2px; overflow: hidden; }
 .room-essentials .eyebrow { font-size: 12px; line-height: 15px; letter-spacing: 1.2px; }
 .room-comparison { background: var(--deep-olive); color: white; }
