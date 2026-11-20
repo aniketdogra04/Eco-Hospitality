@@ -3,7 +3,8 @@ const codeRoot = new URL('./', import.meta.url);
 const asset = name => new URL('../assets/' + name, codeRoot).href;
 const route = path => new URL(path, codeRoot).href;
 const destinations = ['Shimla', 'Dalhousie', 'Spiti'];
-const destinationURL = name => name === 'Shimla' ? route('destinations/shimla.html') : route('index.html?destination=' + name + '#booking');
+// Temporary shared targets until the remaining destination/property pages are ready.
+const destinationURL = () => route('destinations/shimla.html');
 let active = null;
 function closeActive(restore = false) { if (active) { const current = active; active = null; current.close(restore); } }
 function position(panel, trigger) {
@@ -81,13 +82,13 @@ for (const link of document.querySelectorAll('.main-nav > a')) {
   link.replaceWith(trigger);
   const hotels = [
     ['Golden Fern Resort, Shimla', 'hotels/golden-fern.html'],
-    ['Shimla Havens Resort', 'index.html?destination=Shimla#hotels'],
-    ['Hotel Woodrina, Shimla', 'index.html?destination=Shimla#hotels'],
-    ['SS Resort, Dalhousie', 'index.html?destination=Dalhousie#hotels'],
-    ['Hotel Snow Castle, Dalhousie', 'index.html?destination=Dalhousie#hotels'],
-    ['Mahamaya Regency, Kaza', 'index.html?destination=Spiti#hotels'],
-    ['Maitreya Regency, Tabo', 'index.html?destination=Spiti#hotels'],
-    ['Maitreya Mud House, Tabo', 'index.html?destination=Spiti#hotels'],
+    ['Shimla Havens Resort', 'hotels/golden-fern.html'],
+    ['Hotel Woodrina, Shimla', 'hotels/golden-fern.html'],
+    ['SS Resort, Dalhousie', 'hotels/golden-fern.html'],
+    ['Hotel Snow Castle, Dalhousie', 'hotels/golden-fern.html'],
+    ['Mahamaya Regency, Kaza', 'hotels/golden-fern.html'],
+    ['Maitreya Regency, Tabo', 'hotels/golden-fern.html'],
+    ['Maitreya Mud House, Tabo', 'hotels/golden-fern.html'],
   ];
   list(trigger, label === 'Destinations' ? destinations.map(name => ({name, href: destinationURL(name)})) : hotels.map(([name,path]) => ({name,href:route(path)})));
 }
