@@ -319,9 +319,10 @@ dialog::backdrop { background: rgb(26 27 13 / .65); }
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .motion-ready :is(.hotel-editorial, .chef-section, .wedding-process) { overflow: clip; }
   .motion-ready .reveal { opacity: 0; transform: translateY(28px); transition: opacity 800ms ease, transform 800ms cubic-bezier(.2,.7,.2,1); }
-  .motion-ready .reveal.from-left { transform: translateX(-32px); }
-  .motion-ready .reveal.from-right { transform: translateX(32px); }
+  .motion-ready .reveal.from-left { transform: translateX(calc(-1 * min(32px, var(--gutter)))); }
+  .motion-ready .reveal.from-right { transform: translateX(min(32px, var(--gutter))); }
   .motion-ready .reveal.is-visible { opacity: 1; transform: translate(0, 0); }
   .motion-ready .wave-heading .wave-word { display: inline-block; opacity: 0; transform: translateY(12px); }
   .motion-ready .wave-heading.is-visible .wave-word { animation: heading-wave 750ms ease both; animation-delay: calc(var(--word-index) * 55ms); }

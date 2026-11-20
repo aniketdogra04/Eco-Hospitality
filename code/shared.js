@@ -38,11 +38,30 @@ document.addEventListener("keydown", (event) => {
 // Reveal sections once as they enter the viewport.
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 if (!reducedMotion.matches && "IntersectionObserver" in window) {
-  const revealTargets = document.querySelectorAll(
+  const existingRevealTargets = document.querySelectorAll(
     ".intro-copy > p, .stats, .section-heading > *, .destination, .listing-card, [data-reveal], " +
     ".experience-photo, .experience-copy > :not(h2), .editorial-copy > :not(h2), " +
     ".editorial-figure, .faq-layout > div > :not(h2), .accordion, .closing-copy > :not(h2)"
   );
+  // Reuse the homepage's horizontal reveal for paired image-and-copy sections.
+  // Measure before motion classes are applied so reversed grids use their visual side.
+  const horizontalPanels = new Map();
+  const splitRows = document.querySelectorAll(
+    ".hotel-editorial, .chef-section, .wedding-process, .dining-row, .wedding-row, " +
+    ".hotel-about-row, .room-row, .story-layout, .value-row, .setting-layout, .experience-card"
+  );
+  for (const row of splitRows) {
+    const panels = [...row.children];
+    if (panels.length !== 2) continue;
+    const bounds = row.getBoundingClientRect();
+    panels.forEach((panel, index) => {
+      const rect = panel.getBoundingClientRect();
+      const stacked = rect.width > bounds.width * .8;
+      const fromLeft = stacked ? index === 0 : rect.left + rect.width / 2 < bounds.left + bounds.width / 2;
+      horizontalPanels.set(panel, fromLeft ? "from-left" : "from-right");
+    });
+  }
+  const revealTargets = new Set([...existingRevealTargets, ...horizontalPanels.keys()]);
   const headings = document.querySelectorAll("main h1, main h2, main h3");
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
@@ -53,8 +72,14 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   }, { threshold: 0.08 });
 
   for (const target of revealTargets) {
+    // Animate a panel once rather than also sliding its nested paragraphs/buttons.
+    let parent = target.parentElement;
+    while (parent && !horizontalPanels.has(parent)) parent = parent.parentElement;
+    if (parent) continue;
     target.classList.add("reveal");
-    if (target.matches(".experience-photo, .editorial-wedding .editorial-copy > *, .editorial-dining .editorial-figure")) {
+    if (horizontalPanels.has(target)) {
+      target.classList.add(horizontalPanels.get(target));
+    } else if (target.matches(".experience-photo, .editorial-wedding .editorial-copy > *, .editorial-dining .editorial-figure")) {
       target.classList.add("from-left");
     } else if (target.matches(".experience-copy > *, .editorial-wedding .editorial-figure, .editorial-dining .editorial-copy > *")) {
       target.classList.add("from-right");
