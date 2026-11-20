@@ -22,7 +22,7 @@ function popup(trigger, panel, onToggle = () => {}) {
   trigger.setAttribute('aria-expanded', 'false');
   trigger.setAttribute('aria-controls', panel.id);
   const controller = {
-    open() { if (active === controller) return; closeActive(); panel.showPopover(); trigger.setAttribute('aria-expanded', 'true'); position(panel, trigger); active = controller; onToggle(true); },
+    open() { if (active === controller) return; closeActive(); panel.showPopover(); trigger.setAttribute('aria-expanded', 'true'); onToggle(true); position(panel, trigger); active = controller; },
     close(restore) { panel.hidePopover(); trigger.setAttribute('aria-expanded', 'false'); onToggle(false); if (restore) trigger.focus(); },
     panel, trigger,
   };
@@ -193,6 +193,7 @@ export function openDatePicker(dialog, trigger) {
 
 export function initHotelMenu(trigger, panel) {
   popup(trigger, panel, open => {
+    if (open) panel.querySelector('.other-properties-menu').open = true;
     trigger.setAttribute('aria-label', open ? 'Close Eco Hospitality menu' : 'Explore Eco Hospitality');
   });
   panel.addEventListener('click', event => { if (event.target.closest('a')) closeActive(true); });

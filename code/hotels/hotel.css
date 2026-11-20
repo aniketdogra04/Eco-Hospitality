@@ -147,14 +147,14 @@
 .hotel-header :is(.site-menu-button,.menu-toggle)[aria-expanded="true"] .menu-open-icon { display: none; }
 .hotel-header :is(.site-menu-button,.menu-toggle)[aria-expanded="true"] .menu-close-icon { display: block; }
 .other-properties-menu { padding-bottom: 6px; }
-.other-properties-menu summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 12px 0; cursor: pointer; list-style: none; font: 400 16px/26px var(--sans); }
+.other-properties-menu summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 12px; cursor: pointer; list-style: none; font: 400 16px/26px var(--sans); }
 .other-properties-menu summary::-webkit-details-marker { display: none; }
 .other-properties-menu summary img { flex: none; transition: transform 220ms ease; }
 .other-properties-menu:not([open]) summary img { transform: rotate(180deg); }
-.other-properties-menu:not([open]) summary { padding-bottom: 6px; }
 .other-properties-menu:not([open]) { padding-bottom: 0; }
 .other-properties-links { padding-inline: 12px; }
 .other-properties-links a { display: block; padding-top: 8px; font: 400 14px/22px var(--sans); }
 .other-properties-links a:first-child { padding-top: 6px; }
-.other-properties-menu summary:is(:hover,:focus-visible), .other-properties-links a:is(:hover,:focus-visible) { background: #efefea; border-radius: 999px; outline-offset: -2px; }
+.other-properties-menu summary:is(:hover,:focus-visible) { background: #efefea; border-radius: 999px; outline-offset: -2px; }
+.other-properties-links a:is(:hover,:focus-visible) { color: var(--olive-hover); }
 @media(prefers-reduced-motion:reduce) { .other-properties-menu summary img { transition: none; } }
