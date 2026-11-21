@@ -18,21 +18,6 @@
 
 .listing-photo { width: 100%; position: relative; height: 260px; padding: 14px; overflow: hidden; border-radius: 2px; background: var(--sage); }
 
-.badge {
-  position: relative;
-  display: inline-block;
-  padding: 6px 10px;
-  border: .6px solid white;
-  border-radius: 999px;
-  background: rgb(255 255 255 / .86);
-  backdrop-filter: blur(1px);
-  color: var(--heading-ink);
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-}
 
 .listing-meta { display: block; margin-top: 20px; color: #758b3f; font-size: 12px; font-weight: 600; letter-spacing: .2px; text-transform: uppercase; }
 
@@ -188,63 +173,6 @@
 .form-row { gap: 16px; }
 }
 
-/* Shared booking bar and date picker. */
-.booking-wrap {
-  position: relative;
-  z-index: 1;
-  width: min(788px, calc(100% - 2 * var(--gutter)));
-  margin: -44px auto 0;
-  padding-bottom: var(--section-space);
-}
-.booking-form {
-  display: grid;
-  grid-template-columns: minmax(220px, 1fr) 272px auto;
-  align-items: center;
-  padding: 14px 14px 14px 32px;
-  border-radius: 999px;
-  background: white;
-  box-shadow: 0 12px 25px rgb(0 0 0 / .12);
-}
-.booking-field { display: grid; gap: 6px; min-width: 0; }
-.booking-field > span { color: #6d7067; font-size: 14px; font-weight: 500; }
-.booking-destination { border-right: 1px solid #cfcfc8; padding-right: 24px; }
-.booking-dates { padding-left: 24px; }
-.booking-field select, .destination-trigger, .date-trigger {
-  padding: 0;
-  border: 0;
-  background-color: transparent;
-  color: #22251f;
-  font-size: var(--font-size-body);
-  font-weight: 500;
-  text-align: left;
-}
-.booking-field select {
-  width: 100%;
-  appearance: none;
-  padding-right: 26px;
-  background: transparent;
-  cursor: pointer;
-}
-.date-trigger { display: flex; align-items: center; gap: 8px; }
-.booking-submit { min-width: 188px; margin-left: 24px; padding-block: 16px; }
-.date-inputs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.date-inputs label { display: grid; gap: 6px; min-width: 0; font-size: 14px; font-weight: 500; }
-.date-inputs input { width: 100%; min-width: 0; padding: 10px; border: 1px solid #b3b7a4; border-radius: 4px; color: var(--ink); background: white; }
-@media (max-width: 860px) {
-.booking-form { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr) auto; padding-left: 20px; }
-.booking-destination { padding-right: 12px; }
-.booking-dates { padding-left: 12px; }
-.booking-submit { min-width: 0; margin-left: 14px; padding-inline: 16px; }
-.booking-field :is(select, button) { font-size: 14px; }
-}
-@media (max-width: 620px) {
-.booking-wrap { margin-top: -28px; }
-.booking-form { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px; border-radius: 16px; }
-.booking-destination { padding: 0 0 12px; border-right: 0; border-bottom: 1px solid var(--line); }
-.booking-dates { padding-left: 0; }
-.booking-submit { width: 100%; margin-left: 0; padding-block: 12px; }
-}
-
 /* One native link covers each hotel listing card, including its photo and title. */
 .hotel-link-card { position: relative; }
 .hotel-card-link::before { position: absolute; inset: 0; z-index: 1; border-radius: 2px; content: ""; }
@@ -252,12 +180,6 @@
 .hotel-card-link:focus-visible { outline: none; }
 .hotel-link-card .listing-photo img, .story-link-card .listing-photo img { transition: transform 350ms ease; }
 .hotel-link-card:hover .listing-photo img, .story-link-card:hover .listing-photo img { transform: scale(1.025); }
-
-/* Track the native popup itself so closing without a selection resets the arrow. */
-.destination-select { position: relative; display: block; }
-.destination-select::after { content: ''; position: absolute; right: 0; top: calc(50% - 10px); width: 20px; height: 20px; background: url("../assets/chevron.svg") center/contain no-repeat; pointer-events: none; transition: transform 220ms ease; }
-.destination-select:has(select:open)::after { transform: rotate(180deg); }
-@media(prefers-reduced-motion:reduce) { .destination-select::after { transition: none; } }
 
 /* One native link covers each journal card, preserving keyboard and new-tab access. */
 .story-link-card { position: relative; }
