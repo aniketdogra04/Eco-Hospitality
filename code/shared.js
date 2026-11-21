@@ -52,6 +52,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
     ".hotel-about-row, .room-row, .story-layout, .value-row, .setting-layout, .experience-card"
   );
   for (const row of splitRows) {
+    if (row.closest('[data-motion="none"]')) continue;
     const panels = [...row.children];
     if (panels.length !== 2) continue;
     const bounds = row.getBoundingClientRect();
@@ -73,6 +74,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   }, { threshold: 0.08 });
 
   for (const target of revealTargets) {
+    if (target.closest('[data-motion="none"]')) continue;
     // Animate a panel once rather than also sliding its nested paragraphs/buttons.
     let parent = target.parentElement;
     while (parent && !horizontalPanels.has(parent)) parent = parent.parentElement;
@@ -89,6 +91,7 @@ if (!reducedMotion.matches && "IntersectionObserver" in window) {
   }
 
   for (const heading of headings) {
+    if (heading.closest('[data-motion="none"]')) continue;
     const original = heading.textContent.trim().replace(/\s+/g, " ");
     heading.setAttribute("aria-label", original);
     let index = 0;
