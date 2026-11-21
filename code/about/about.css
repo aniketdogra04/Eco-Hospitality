@@ -9,7 +9,7 @@
 .story-copy > p { margin-top: 24px; color: var(--body-color); }
 .story-copy .story-lead { font: italic 500 24px/1.25 var(--serif); color: var(--ink); letter-spacing: -.2px; }
 .story-photo { position: relative; min-height: 600px; border-radius: 2px; overflow: hidden; }
-.story-photo .badge { position: absolute; top: 16px; left: 16px; padding: 7px 11px; font-size: 10px; letter-spacing: .7px; background: white; }
+.story-photo .badge { position: absolute; top: 16.375px; left: 15.640625px; display: inline-flex; align-items: center; justify-content: center; width: 154px; height: 31px; white-space: nowrap; padding: 7px 11px; border: 1px solid white; font-size: 10px; line-height: 15px; letter-spacing: .7px; background: rgb(255 255 255 / .88); backdrop-filter: none; }
 .stats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 32px; border-top: 1px solid var(--line); padding-top: 28px; }
 .stats div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 7px; }
 .stats dd { font: italic 500 29px/26.1px var(--serif); }
