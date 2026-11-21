@@ -250,8 +250,8 @@
 .hotel-card-link::before { position: absolute; inset: 0; z-index: 1; border-radius: 2px; content: ""; }
 .hotel-link-card:has(.hotel-card-link:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
 .hotel-card-link:focus-visible { outline: none; }
-.hotel-link-card .listing-photo img { transition: transform 350ms ease; }
-.hotel-link-card:hover .listing-photo img { transform: scale(1.025); }
+.hotel-link-card .listing-photo img, .story-link-card .listing-photo img { transition: transform 350ms ease; }
+.hotel-link-card:hover .listing-photo img, .story-link-card:hover .listing-photo img { transform: scale(1.025); }
 
 /* Track the native popup itself so closing without a selection resets the arrow. */
 .destination-select { position: relative; display: block; }
