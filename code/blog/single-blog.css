@@ -2,7 +2,7 @@
 .article-column { width: min(726px, calc(100% - 2 * var(--gutter))); margin-inline: auto; }
 .article-wide { width: min(912px, calc(100% - 2 * var(--gutter))); margin-inline: auto; }
 .article-header { padding-top: 80px; text-align: center; }
-.article-category { display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgb(210 228 171 / .86); font: 400 10px/16px var(--sans); text-transform: uppercase; }
+.article-category { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 28px; border: 0; box-shadow: inset 0 0 0 .6px #b7d37a; background: rgb(210 228 171 / .86); backdrop-filter: blur(2px); color: #1f211c; }
 .article-header h1 { margin-top: 16px; font-size: 48px; line-height: 1.25; letter-spacing: -.8px; }
 .article-header time { display: block; margin-top: 16px; color: var(--olive); font-size: 14px; font-weight: 600; line-height: 22px; }
 .article-share { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; position: relative; margin-top: 16px; }
