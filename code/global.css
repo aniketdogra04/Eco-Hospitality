@@ -446,3 +446,6 @@ dialog::backdrop { background: rgb(26 27 13 / .65); }
 @media(prefers-reduced-motion:reduce) { .destination-trigger::after { transition: none; } }
 
 .calendar-panel .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+/* Promotional tag variant shared by offer cards and offer details. */
+.badge-offer { display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; width: 73px; height: 31px; padding: 6px 10px; border: .6px solid #fd5; border-left: 0; border-radius: 0 999px 999px 0; background: linear-gradient(90deg, #f4ba00 0%, #ffdd55 50%, #f4ba00 100%); backdrop-filter: none; color: #11120e; font-size: 12px; line-height: 19.2px; font-weight: 600; letter-spacing: .2px; }

@@ -1,0 +1,32 @@
+/* Offers compose shared header/footer, listing cards, tags, actions and dialogs. */
+.offers-hero { position: relative; isolation: isolate; display: grid; align-items: center; min-height: 520px; }
+.offers-hero > .cover { z-index: -1; }
+.offers-hero-copy { max-width: 680px; }
+.offers-hero h1 { margin-top: 20px; font-size: 56px; line-height: .8; letter-spacing: -1px; }
+.offers-hero .hero-title-line { display: block; }
+.offers-hero .hero-title-line + .hero-title-line { margin-top: 16px; }
+.offers-hero .hero-description { max-width: 570px; margin-top: 28px; color: var(--body-color); }
+.offers-grid { margin-top: 0; align-items: start; }
+.offer-card .listing-meta { margin-top: 19px; color: var(--olive); }
+.offer-card h2 { margin: 8px 0 16px; color: #1f211c; font-size: 24px; line-height: 28.8px; letter-spacing: 0; }
+.offer-card .listing-photo { padding: 0; }
+.offer-card .badge-offer { position: absolute; top: 14px; left: 0; }
+.offer-card .listing-photo img { transition: transform 350ms ease; }
+.offer-card:hover .listing-photo img { transform: scale(1.025); }
+.offer-dialog-validity { margin-top: 12px; color: var(--olive); font-size: 14px; font-weight: 600; }
+#offer-dialog .badge-offer { position: relative; }
+#offer-dialog .detail-image { max-height: 260px; }
+@media(max-width:860px) { .offers-hero h1 { font-size: clamp(40px,5.4vw,56px); } }
+@media(max-width:620px) {
+ .offers-hero { min-height: 500px; padding-block: 48px; }
+ .offers-hero > .cover { object-position: 62% center; }
+ .offers-hero h1 { font-size: clamp(36px,9vw,48px); line-height: 1; }
+ .offers-hero .hero-title-line + .hero-title-line { margin-top: 8px; }
+ .offers-hero .hero-description { max-width: 300px; }
+ .offers-grid { margin-top: 0; }
+}
+
+.offer-card { position: relative; }
+.offer-card [data-offer]::before { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: 2px; }
+.offer-card:has([data-offer]:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
+.offer-card [data-offer]:focus-visible { outline: none; }

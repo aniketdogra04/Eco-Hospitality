@@ -169,3 +169,9 @@ The hotel header's Eco Hospitality menu uses [Dropdown - menu icon (Individual h
 The Single blog title uses the shared heading entrance animation. Its hero image and article body use `data-motion="none"` to remain static. The bottom Plan your stay CTA and Recent blogs section retain shared scroll animations. Journal cards share hotel cards’ image hover scale and timing.
 
 Shared tag (`.badge`) and searchbar/booking styles, including responsive rules and destination controls, live in `code/global.css`. Page-specific tag variants remain in their page stylesheets.
+
+### Offers
+
+`/code/offers.html` implements the [Offers frame](https://www.figma.com/design/B7vUdTqjIcM2ecKgt4ddSD/ECO-website?node-id=1228-12027), using the shared botanical hero, navigation/footer, listing grid, tags, text-link arrows, dialogs and scroll animations. All existing footer Offers entries now open this page. The design supplies six identical Spiti offer cards (25% off, valid 25 December 2026–31 January 2027); their content and order are preserved. The original room photo is local to `assets/offers/` and reused in all six slots. Page-specific layout and interactions live in `code/offers/`; the reusable gold promotional tag variant is in `global.css`.
+
+Each card opens an accessible details dialog containing the supplied title, discount and validity. The enquiry action prepares a reviewable email draft to the existing Eco Hospitality sales address, `sales@ecohospitality.in`, requesting details, terms and availability. No booking or email is submitted automatically.
