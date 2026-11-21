@@ -100,4 +100,5 @@
 #other-destinations .other-card p { padding-right: 12px; }
 #other-destinations .other-card::before { z-index: 0; }
 #other-destinations .other-card > div { position: relative; z-index: 1; }
-.other-card h3 .other-card-arrow { flex: none; }
+.other-card h3 .other-card-arrow { flex: none; transition: transform 350ms ease; }
+.other-card:is(:hover, :focus-visible) .other-card-arrow { transform: rotate(45deg); }
