@@ -258,3 +258,9 @@
 .destination-select::after { content: ''; position: absolute; right: 0; top: calc(50% - 10px); width: 20px; height: 20px; background: url("../assets/chevron.svg") center/contain no-repeat; pointer-events: none; transition: transform 220ms ease; }
 .destination-select:has(select:open)::after { transform: rotate(180deg); }
 @media(prefers-reduced-motion:reduce) { .destination-select::after { transition: none; } }
+
+/* One native link covers each journal card, preserving keyboard and new-tab access. */
+.story-link-card { position: relative; }
+.story-card-link::before { content: ''; position: absolute; inset: 0; z-index: 1; border-radius: 2px; }
+.story-link-card:has(.story-card-link:focus-visible) { outline: 2px solid var(--focus-ring); outline-offset: 5px; }
+.story-card-link:focus-visible { outline: none; }
